@@ -56,7 +56,7 @@ always@(*)begin
 			end
 		3'b010: //sub
 			begin
-				result = operand_A - operand_B;
+				result = operand_A + ~operand_B + 1;
 				flags_out[3] = result[15];
 				if (result == 0)
 					flags_out[2] = 1'b1;
@@ -66,7 +66,7 @@ always@(*)begin
 			end
 		3'b011: //sbc
 			begin
-				result = operand_A - operand_B - c_in;
+				result = operand_A + ~operand_B + ~c_in + 1;
 				flags_out[3] = result[15];
 				if (result == 0)
 					flags_out[2] = 1'b1;

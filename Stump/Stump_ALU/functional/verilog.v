@@ -113,6 +113,14 @@ always@(*)begin
 				flags_out[1] = 1'bx;
 				flags_out[0] = 1'bx;
 			end
+		default: 
+			begin
+				result = 0;
+				flags_out[3] = 1'bx;
+				flags_out[2] = 1'bx;
+				flags_out[1] = 1'bx;
+				flags_out[0] = 1'bx;
+			end
 	endcase
 end
 

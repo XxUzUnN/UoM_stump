@@ -99,7 +99,7 @@ always@(*)begin
 			end
 		3'b110: //ldst
 			begin
-				result = operand_B;
+				result = operand_A + operand_B;
 				flags_out[3] = 1'bx;
 				flags_out[2] = 1'bx;
 				flags_out[1] = 1'bx;
@@ -107,7 +107,7 @@ always@(*)begin
 			end
 		3'b111: //bcc
 			begin
-				result = operand_A;
+				result = operand_A + operand_B;
 				flags_out[3] = 1'bx;
 				flags_out[2] = 1'bx;
 				flags_out[1] = 1'bx;

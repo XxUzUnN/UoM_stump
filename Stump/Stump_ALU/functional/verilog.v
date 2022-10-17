@@ -26,7 +26,7 @@ module Stump_ALU (input  wire [15:0] operand_A,		// First operand
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -*/
 /* Declarations of any internal signals and buses used                        */
-
+reg [16:0] tmpresult;
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -*/
 
@@ -36,43 +36,47 @@ always@(*)begin
 	case (func)
 		3'b000: //add
 			begin
-				result = operand_A + operand_B;
+				tmpresult = operand_A + operand_B;
+				result = tmpresult[15:0];
 				flags_out[3] = result[15];
 				if (result == 0)
 					flags_out[2] = 1'b1;
 				if (operand_A[15] == operand_B[15] && operand_A[15] != result[15])
 					flags_out[1] = 1'b1;
-				flags_out[0] = result[16];
+				flags_out[0] = tmpresult[16];
 			end
 		3'b001: //adc
 			begin
-				result = operand_A + operand_B + c_in;
+				tmpresult = operand_A + operand_B + c_in;
+				result = tmpresult[15:0];
 				flags_out[3] = result[15];
 				if (result == 0)
 					flags_out[2] = 1'b1;
 				if (operand_A[15] == operand_B[15] && operand_A[15] != result[15])
 					flags_out[1] = 1'b1;
-				flags_out[0] = result[16];
+				flags_out[0] = tmpresult[16];
 			end
 		3'b010: //sub
 			begin
-				result = operand_A + ~operand_B + 1;
+				tmpresult = operand_A + ~operand_B + 1;
+				result = tmpresult[15:0];
 				flags_out[3] = result[15];
 				if (result == 0)
 					flags_out[2] = 1'b1;
 				if (operand_A[15] != operand_B[15] && operand_B[15] == result[15])
 					flags_out[1] = 1'b1;
-				flags_out[0] = ~result[16];
+				flags_out[0] = ~tmpresult[16];
 			end
 		3'b011: //sbc
 			begin
-				result = operand_A + ~operand_B + ~c_in + 1;
+				tmpresult = operand_A + (~operand_B + 1) + (~c_in + 1);
+				result = tmpresult[15:0];
 				flags_out[3] = result[15];
 				if (result == 0)
 					flags_out[2] = 1'b1;
 				if (operand_A[15] != operand_B[15] && operand_B[15] == result[15])
 					flags_out[1] = 1'b1;
-				flags_out[0] = ~result[16];
+				flags_out[0] = ~tmpresult[16];
 			end
 		3'b100: //and
 			begin

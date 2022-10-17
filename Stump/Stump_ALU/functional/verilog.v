@@ -33,6 +33,7 @@ reg [16:0] tmpresult;
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -*/
 /* Verilog code                                                               */
 always@(*)begin
+	flags_out = 0;
 	case (func)
 		3'b000: //add
 			begin
@@ -65,7 +66,7 @@ always@(*)begin
 					flags_out[2] = 1'b1;
 				if (operand_A[15] != operand_B[15] && operand_B[15] == result[15])
 					flags_out[1] = 1'b1;
-				flags_out[0] = ~tmpresult[16];
+				flags_out[0] = tmpresult[16];
 			end
 		3'b011: //sbc
 			begin
@@ -76,7 +77,7 @@ always@(*)begin
 					flags_out[2] = 1'b1;
 				if (operand_A[15] != operand_B[15] && operand_B[15] == result[15])
 					flags_out[1] = 1'b1;
-				flags_out[0] = ~tmpresult[16];
+				flags_out[0] = tmpresult[16];
 			end
 		3'b100: //and
 			begin

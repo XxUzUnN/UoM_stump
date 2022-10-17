@@ -1,0 +1,45 @@
+TOOL:	xmxlmode	21.03-s009: Started on Oct 17, 2022 at 15:04:51 BST
+/cadtools5/cds_root/XCELIUM2103/tools.lnx86/bin/64bit/ncxlmode
+	+delay_mode_path
+	+typdelays
+	-y
+	/cadtools5/xil_cds_design_kits/verilog/unisims
+	+libext+.v
+	-l
+	simout.tmp
+	/home/f93937xl/Cadence/COMP22111/Stump_ALU_run1/testfixture.template
+	-f /home/f93937xl/Cadence/COMP22111/Stump_ALU_run1/verilog.inpfiles
+		/home/f93937xl/Cadence/COMP22111/Stump/Stump_ALU/functional/verilog.v
+		/home/f93937xl/Cadence/COMP22111/Stump/Stump_ALU_test/functional/verilog.v
+		ihnl/cds0/netlist
+	-f /netopt/info/courses/COMP22111/JULY2022/Cadence/reffiles/include
+		/cadtools5/Xilinx_14.7/14.7/ISE_DS/ISE/verilog/src/glbl.v
+		+incdir+..
+		+nccdslib+../cds.lib
+	+nostdout
+	+nocopyright
+	+ncvlogargs+" -neverwarn -nostdout -nocopyright "
+	+ncelabargs+" -neg_tchk  -nonotifier  -sdf_NOCheck_celltype  -access +r  -access +w  -access +c  -pulse_e 100  -pulse_r 100  -neverwarn  -timescale 1ns/10ps -nostdout -nocopyright"
+	+ncsimargs+" -neverwarn  -nocopyright -gui -input /home/f93937xl/Cadence/COMP22111/Stump_ALU_run1/.simTmpNCCmd "
+	+mpssession+virtuoso79991
+	+mpshost+E-10CKIUF117077.it.manchester.ac.uk
+xmxlmode: *W,OPDEPRREN: Command Line Option (+nccdslib+../cds.lib) is deprecated. Use (+xmcdslib+../cds.lib) instead.
+xmxlmode: *W,OPDEPRREN: Command Line Option (+ncvlogargs+ -neverwarn -nostdout -nocopyright ) is deprecated. Use (+xmvlogargs+ -neverwarn -nostdout -nocopyright ) instead.
+xmxlmode: *W,OPDEPRREN: Command Line Option (+ncelabargs+ -neg_tchk  -nonotifier  -sdf_NOCheck_celltype  -access +r  -access +w  -access +c  -pulse_e 100  -pulse_r 100  -neverwarn  -timescale 1ns/10ps -nostdout -nocopyright) is deprecated. Use (+xmelabargs+ -neg_tchk  -nonotifier  -sdf_NOCheck_celltype  -access +r  -access +w  -access +c  -pulse_e 100  -pulse_r 100  -neverwarn  -timescale 1ns/10ps -nostdout -nocopyright) instead.
+xmxlmode: *W,OPDEPRREN: Command Line Option (+ncsimargs+ -neverwarn  -nocopyright -gui -input /home/f93937xl/Cadence/COMP22111/Stump_ALU_run1/.simTmpNCCmd ) is deprecated. Use (+xmsimargs+ -neverwarn  -nocopyright -gui -input /home/f93937xl/Cadence/COMP22111/Stump_ALU_run1/.simTmpNCCmd ) instead.
+
+-------------------------------------
+Relinquished control to SimVision...
+xcelium> 
+xcelium> source /cadtools5/cds_root/XCELIUM2103/tools/xcelium/files/xmsimrc
+xcelium> database -open shmWave -shm -default -into shm.db
+Created default SHM database shmWave
+xcelium> probe -create -shm test.top  -all   -depth 1
+Created probe 1
+xcelium> probe -create -shm test.top.ALU.c_in test.top.ALU.csh test.top.ALU.flags_out test.top.ALU.func test.top.ALU.operand_A test.top.ALU.operand_B test.top.ALU.result test.top.ALU.tmpresult
+Created probe 2
+xcelium> run
+Simulation stopped via $stop(1) at time 10900 NS + 0
+xcelium> ^C
+xcelium> exit
+TOOL:	xmxlmode	21.03-s009: Exiting on Oct 17, 2022 at 15:05:25 BST  (total: 00:00:34)

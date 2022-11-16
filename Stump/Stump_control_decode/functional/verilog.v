@@ -53,12 +53,12 @@ begin
             memory = 1'b0;
             ext_op = 1'hx;
             reg_write = 1'b1;
-            dest[2:0] = 3'b111;
-            srcA[2:0] = 3'b111;
-            srcB[2:0] = 3'hx;
-            shift_op[1:0] = 2'b00;
+            dest = 3'b111;
+            srcA = 3'b111;
+            srcB = 3'hx;
+            shift_op = 2'b00;
             opB_mux_sel = 1'hx;
-            alu_func[2:0] = 3'b000;
+            alu_func = 3'b000;
             cc_en = 1'b0;
             mem_ren = 1'b1;
             mem_wen = 1'b0;
@@ -72,24 +72,24 @@ begin
                 `ADD, `ADC, `SUB, `SBC, `AND, `OR:
                 begin
                     reg_write = 1'b1;
-                    dest[2:0] = ir[10:8];
-                    srcA[2:0] = ir[7:5];
-                    alu_func[2:0] = ir[15:13];
+                    dest = ir[10:8];
+                    srcA = ir[7:5];
+                    alu_func = ir[15:13];
                     cc_en = ir[11];
                     mem_ren = 1'b0;
                     mem_wen = 1'b0;
                     if(ir[12] == 1'b0)
                     begin
                         ext_op = 1'hx;
-                        srcB[2:0] = ir[4:2];
-                        shift_op[1:0] = ir[1:0];
+                        srcB = ir[4:2];
+                        shift_op = ir[1:0];
                         opB_mux_sel = 1'b0;
                     end
                     if(ir[12] == 1'b1)
                     begin
                         ext_op = 1'b0;
-                        srcB[2:0] = 3'hx;
-                        shift_op[1:0] = 2'b00;
+                        srcB = 3'hx;
+                        shift_op = 2'b00;
                         opB_mux_sel = 1'b1;
                     end
                 end
@@ -97,12 +97,12 @@ begin
                 begin
                     ext_op = 1'b1;
                     reg_write = 1'b1;
-                    dest[2:0] = 3'b111;
-                    srcA[2:0] = 3'b111;
-                    srcB[2:0] = 3'hx;
-                    shift_op[1:0] = 2'hx;
+                    dest = 3'b111;
+                    srcA = 3'b111;
+                    srcB = 3'hx;
+                    shift_op = 2'hx;
                     opB_mux_sel = 1'hx;
-                    alu_func[2:0] = `BCC;
+                    alu_func = `BCC;
                     cc_en = 1'b1;
                     mem_ren = 1'b0;
                     mem_wen = 1'b0;
@@ -111,12 +111,12 @@ begin
                 begin
                     ext_op = 1'b0;
                     reg_write = 1'b0;
-                    dest[2:0] = 3'hx;
-                    srcA[2:0] = 3'hx;
-                    srcB[2:0] = 3'hx;
-                    shift_op[1:0] = 2'hx;
+                    dest = 3'hx;
+                    srcA = 3'hx;
+                    srcB = 3'hx;
+                    shift_op = 2'hx;
                     opB_mux_sel = 1'hx;
-                    alu_func[2:0] = `LDST;
+                    alu_func = `LDST;
                     cc_en = 1'b0;
                     mem_ren = ~ir[11];
                     mem_wen = ir[11];
@@ -124,12 +124,12 @@ begin
                 default :
                 begin
                     reg_write = 1'hx;
-                    dest[2:0] = 3'hx;
-                    srcA[2:0] = 3'hx;
-                    srcB[2:0] = 3'hx;
-                    shift_op[1:0] = 2'hx;
+                    dest = 3'hx;
+                    srcA = 3'hx;
+                    srcB = 3'hx;
+                    shift_op = 2'hx;
                     opB_mux_sel = 1'hx;
-                    alu_func[2:0] = 3'hx;
+                    alu_func = 3'hx;
                     cc_en = 1'hx;
                     mem_ren = 1'hx;
                     mem_wen = 1'hx;
@@ -143,12 +143,12 @@ begin
             memory = 1'b1;
             ext_op = 1'hx;
             reg_write = ~ir[11];
-            dest[2:0] = ir[11]? 3'hx: ir[10:8];
-            srcA[2:0] = ir[11]? ir[7:5] : 3'hx;
-            srcB[2:0] = 3'hx;
-            shift_op[1:0] = 2'hx;
+            dest = ir[11]? 3'hx: ir[10:8];
+            srcA = ir[11]? ir[7:5] : 3'hx;
+            srcB = 3'hx;
+            shift_op = 2'hx;
             opB_mux_sel = 1'hx;
-            alu_func[2:0] = 3'hx;
+            alu_func = 3'hx;
             cc_en = 1'hx;
             mem_ren = ~ir[11];
             mem_wen = ir[11];
@@ -160,12 +160,12 @@ begin
             memory = 1'hx;
             ext_op = 1'hx;
             reg_write = 1'hx;
-            dest[2:0] = 3'hx;
-            srcA[2:0] = 3'hx;
-            srcB[2:0] = 3'hx;
-            shift_op[1:0] = 2'hx;
+            dest = 3'hx;
+            srcA = 3'hx;
+            srcB = 3'hx;
+            shift_op = 2'hx;
             opB_mux_sel = 1'hx;
-            alu_func[2:0] = 3'hx;
+            alu_func = 3'hx;
             cc_en = 1'hx;
             mem_ren = 1'hx;
             mem_wen = 1'hx;

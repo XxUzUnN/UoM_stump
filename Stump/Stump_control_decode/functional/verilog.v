@@ -143,8 +143,8 @@ begin
             memory = 1'b1;
             ext_op = 1'hx;
             reg_write = ~ir[11];
-            dest = ir[11]? ir[10:8]: 3'hx;
-            srcA = ir[11]? ir[7:5] : 3'hx;
+            dest = ir[11]? ir[7:5] : 3'hx;
+            srcA = ir[11]? 3'hx: ir[10:8];
             srcB = 3'hx;
             shift_op = 2'hx;
             opB_mux_sel = 1'hx;

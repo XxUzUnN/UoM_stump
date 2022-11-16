@@ -1,4 +1,4 @@
-// Stump control decode module.
+// Stump control deco de module.
 // Behavioural Verilog module describing combinatorial logic.
 //
 // P W Nutter
@@ -43,8 +43,135 @@ module Stump_control_decode (input  wire [1:0]  state,      // current state of 
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -*/
 /* Control decoder                                                             */
-
-
+always @ (*)
+begin
+    case(state)
+        `FETCH :
+        begin
+            fetch = 1'b1;
+            execute = 1'b0;
+            memory = 1'b0;
+            ext_op = 1'hx;
+            reg_write = 1'b1;
+            dest[2:0] = 3'b111;
+            srcA[2:0] = 3'b111;
+            srcB[2:0] = 3'hx;
+            shift_op[1:0] = 2'b00;
+            opB_mux_sel = 1'hx;
+            alu_func[2:0] = 3'b000;
+            cc_en = 1'b0;
+            mem_ren = 1'b1;
+            mem_wen = 1'b0;
+        end
+        `EXECUTE :
+        begin
+            fetch = 1'b0;
+            execute = 1'b1;
+            memory = 1'b0;
+            case(ir[15:13])
+                `ADD, `ADC, `SUB, `SBC, `AND, `OR:
+                begin
+                    reg_write = 1'b1;
+                    dest[2:0] = ir[10:8];
+                    srcA[2:0] = ir[7:5];
+                    alu_func[2:0] = ir[15:13];
+                    cc_en = ir[11];
+                    mem_ren = 1'b0;
+                    mem_wen = 1'b0;
+                    if(ir[12] == 1'b0)
+                    begin
+                        ext_op = 1'hx;
+                        srcB[2:0] = ir[4:2];
+                        shift_op[1:0] = ir[1:0];
+                        opB_mux_sel = 1'b0;
+                    end
+                    if(ir[12] == 1'b1)
+                    begin
+                        ext_op = 1'b0;
+                        srcB[2:0] = 3'hx;
+                        shift_op[1:0] = 2'b00;
+                        opB_mux_sel = 1'b1;
+                    end
+                end
+                `BCC:
+                begin
+                    ext_op = 1'b1;
+                    reg_write = 1'b1;
+                    dest[2:0] = 3'b111;
+                    srcA[2:0] = 3'b111;
+                    srcB[2:0] = 3'hx;
+                    shift_op[1:0] = 2'hx;
+                    opB_mux_sel = 1'hx;
+                    alu_func[2:0] = `BCC;
+                    cc_en = 1'b1;
+                    mem_ren = 1'b0;
+                    mem_wen = 1'b0;
+                end
+                `LDST:
+                begin
+                    ext_op = 1'b0;
+                    reg_write = 1'b0;
+                    dest[2:0] = 3'hx;
+                    srcA[2:0] = 3'hx;
+                    srcB[2:0] = 3'hx;
+                    shift_op[1:0] = 2'hx;
+                    opB_mux_sel = 1'hx;
+                    alu_func[2:0] = `LDST;
+                    cc_en = 1'b0;
+                    mem_ren = ~ir[11];
+                    mem_wen = ir[11];
+                end
+                default :
+                begin
+                    reg_write = 1'hx;
+                    dest[2:0] = 3'hx;
+                    srcA[2:0] = 3'hx;
+                    srcB[2:0] = 3'hx;
+                    shift_op[1:0] = 2'hx;
+                    opB_mux_sel = 1'hx;
+                    alu_func[2:0] = 3'hx;
+                    cc_en = 1'hx;
+                    mem_ren = 1'hx;
+                    mem_wen = 1'hx;
+                end
+            endcase
+        end
+        `MEMORY :
+        begin
+            fetch = 1'b0;
+            execute = 1'b0;
+            memory = 1'b1;
+            ext_op = 1'hx;
+            reg_write = ~ir[11];
+            dest[2:0] = ir[11]? 3'hx: ir[10:8];
+            srcA[2:0] = ir[11]? ir[7:5] : 3'hx;
+            srcB[2:0] = 3'hx;
+            shift_op[1:0] = 2'hx;
+            opB_mux_sel = 1'hx;
+            alu_func[2:0] = 3'hx;
+            cc_en = 1'hx;
+            mem_ren = ~ir[11];
+            mem_wen = ir[11];
+        end
+        default :
+        begin
+            fetch = 1'hx;
+            execute = 1'hx;
+            memory = 1'hx;
+            ext_op = 1'hx;
+            reg_write = 1'hx;
+            dest[2:0] = 3'hx;
+            srcA[2:0] = 3'hx;
+            srcB[2:0] = 3'hx;
+            shift_op[1:0] = 2'hx;
+            opB_mux_sel = 1'hx;
+            alu_func[2:0] = 3'hx;
+            cc_en = 1'hx;
+            mem_ren = 1'hx;
+            mem_wen = 1'hx;
+        end
+    endcase
+end
 
 
 

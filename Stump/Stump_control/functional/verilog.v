@@ -33,15 +33,17 @@ module Stump_control(input  wire		rst,
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -*/
 /* Declarations of any internal signals and buses used                        */
-
+wire[1:0] state;
 
 
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -*/
 /* Instantiate modules                                                        */
+Stump_FSM fsm(clk, rst, ir, state);
 
-     
-     
+Stump_control_decode decode(state, cc, ir, fetch, execute, memory, ext_op, reg_write, dest, srcA, srcB, shift_op,
+	opB_mux_sel, alu_func, cc_en, mem_ren, mem_wen);
+
      
      
      

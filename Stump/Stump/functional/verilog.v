@@ -24,15 +24,14 @@ module Stump (input  wire        clk,		// System clock
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -*/
 /* Declarations of any internal signals and buses used                        */
-wire[1:0] execute;
-wire[1:0] memory;
-wire[1:0] ext_op;
-wire[1:0] opB_mux_sel;
+wire execute;
+wire memory;
+wire ext_op;
+wire opB_mux_sel;
 wire[1:0] shift_op;
 wire[2:0] alu_func;
-wire[1:0] execute;
-wire[1:0] cc_en;
-wire[1:0] reg_write;
+wire cc_en;
+wire reg_write;
 wire[2:0] dest;
 wire[2:0] srcA;
 wire[2:0] srcB;

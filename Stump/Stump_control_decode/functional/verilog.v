@@ -109,17 +109,26 @@ begin
                 end
                 `LDST:
                 begin
-                    ext_op = 1'b0;
                     reg_write = ~ir[11];
                     dest = ir[10:8];
                     srcA = ir[7:5];
-                    srcB = 3'hx;
-                    shift_op = 2'hx;
-                    opB_mux_sel = 1'hx;
+                    shift_op = 2'h00;
                     alu_func = `LDST;
                     cc_en = 1'b0;
                     mem_ren = ~ir[11];
                     mem_wen = ir[11];
+                    if(ir[12] == 1'b0) //type1
+                    begin
+                        ext_op = 1'hx;
+                        srcB = ir[4:2];
+                        opB_mux_sel = 1'b0;
+                    end
+                    if(ir[12] == 1'b1) //type2
+                    begin
+                        ext_op = 1'b0;
+                        srcB = 3'hx;
+                        opB_mux_sel = 1'b1;
+                    end
                 end
                 default :
                 begin

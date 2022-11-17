@@ -103,7 +103,7 @@ begin
                     shift_op = 2'b00;
                     opB_mux_sel = 1'b1;
                     alu_func = `BCC;
-                    cc_en = 1'b1;
+                    cc_en = 1'b0;
                     mem_ren = 1'b0;
                     mem_wen = 1'b0;
                 end

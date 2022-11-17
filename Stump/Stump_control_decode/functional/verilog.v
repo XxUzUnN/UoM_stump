@@ -75,17 +75,17 @@ begin
                     dest = ir[10:8];
                     srcA = ir[7:5];
                     alu_func = ir[15:13];
-                    cc_en = 1'b1;
+                    cc_en = ir[11];
                     mem_ren = 1'b0;
                     mem_wen = 1'b0;
-                    if(ir[12] == 1'b0)
+                    if(ir[12] == 1'b0) //type1
                     begin
                         ext_op = 1'hx;
                         srcB = ir[4:2];
                         shift_op = ir[1:0];
                         opB_mux_sel = 1'b0;
                     end
-                    if(ir[12] == 1'b1)
+                    if(ir[12] == 1'b1) //type2
                     begin
                         ext_op = 1'b0;
                         srcB = 3'hx;
@@ -93,7 +93,7 @@ begin
                         opB_mux_sel = 1'b1;
                     end
                 end
-                `BCC:
+                `BCC: //type3
                 begin
                     ext_op = 1'b1;
                     reg_write = 1'b1;
@@ -117,7 +117,7 @@ begin
                     shift_op = 2'hx;
                     opB_mux_sel = 1'hx;
                     alu_func = `LDST;
-                    cc_en = 1'b1;
+                    cc_en = 1'b0;
                     mem_ren = ~ir[11];
                     mem_wen = ir[11];
                 end
@@ -144,7 +144,7 @@ begin
             ext_op = 1'hx;
             reg_write = ~ir[11];
             dest = ir[11]? 3'hx: ir[10:8];
-            srcA = ir[11]? ir[7:5] : 3'hx;
+            srcA = ir[11]? ir[10:8] : 3'hx;
             srcB = 3'hx;
             shift_op = 2'h00;
             opB_mux_sel = 1'hx;

@@ -75,7 +75,7 @@ begin
                     dest = ir[10:8];
                     srcA = ir[7:5];
                     alu_func = ir[15:13];
-                    cc_en = ir[11];
+                    cc_en = 1'b1;
                     mem_ren = 1'b0;
                     mem_wen = 1'b0;
                     if(ir[12] == 1'b0)
@@ -117,7 +117,7 @@ begin
                     shift_op = 2'hx;
                     opB_mux_sel = 1'hx;
                     alu_func = `LDST;
-                    cc_en = 1'b0;
+                    cc_en = 1'b1;
                     mem_ren = ~ir[11];
                     mem_wen = ir[11];
                 end

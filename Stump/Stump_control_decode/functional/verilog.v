@@ -110,9 +110,9 @@ begin
                 `LDST:
                 begin
                     ext_op = 1'b0;
-                    reg_write = 1'b0;
-                    dest = 3'hx;
-                    srcA = 3'hx;
+                    reg_write = ~ir[11];
+                    dest = ir[10:8];
+                    srcA = ir[7:5];
                     srcB = 3'hx;
                     shift_op = 2'hx;
                     opB_mux_sel = 1'hx;
@@ -143,13 +143,13 @@ begin
             memory = 1'b1;
             ext_op = 1'hx;
             reg_write = ~ir[11];
-            dest = ir[11]? ir[7:5] : 3'hx;
-            srcA = ir[11]? 3'hx: ir[10:8];
+            dest = ir[11]? 3'hx: ir[10:8];
+            srcA = ir[11]? ir[7:5] : 3'hx;
             srcB = 3'hx;
-            shift_op = 2'hx;
+            shift_op = 2'h00;
             opB_mux_sel = 1'hx;
             alu_func = 3'hx;
-            cc_en = 1'hx;
+            cc_en = 1'h0;
             mem_ren = ~ir[11];
             mem_wen = ir[11];
         end

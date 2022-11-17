@@ -52,14 +52,14 @@ initial begin
 /* Load program held in memory map                                            */
 /* Uncomment test programs you would like to use, comment the others          */
       
-//      $readmemh("$COMP22111/Stump_src/first.hex", memory);
-//      $display("Running first");
+      $readmemh("$COMP22111/Stump_src/first.hex", memory);
+      $display("Running first");
 //      $readmemh("$COMP22111/Stump_src/test1.hex", memory);
 //      $display("Running test 1");
 //      $readmemh("$COMP22111/Stump_src/test2.hex", memory);
 //      $display("Running test 2");
-      $readmemh("$COMP22111/Stump_src/test3.hex", memory);
-      $display("Running test 3");
+//      $readmemh("$COMP22111/Stump_src/test3.hex", memory);
+//      $display("Running test 3");
 //      $readmemh("$COMP22111/Stump_src/test4.hex", memory);
 //      $display("Running test 4");
 	end

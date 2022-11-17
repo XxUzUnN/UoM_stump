@@ -1,0 +1,51 @@
+//
+// File created by:  xmxlmode
+// Do not modify this file
+//
++delay_mode_path
++typdelays
++libext+.v
++incdir+..
++nccdslib+../cds.lib
++nostdout
++nocopyright
+"+ncvlogargs+ -neverwarn -nostdout -nocopyright "
+"+ncelabargs+ -neg_tchk  -nonotifier  -sdf_NOCheck_celltype  -access +r  -access +w  -access +c  -pulse_e 100  -pulse_r 100  -neverwarn  -timescale 1ns/10ps -nostdout -nocopyright"
+"+ncsimargs+ -neverwarn  -nocopyright -gui -input /home/f93937xl/Cadence/COMP22111/Stump_test_run3/.simTmpNCCmd "
++mpssession+virtuoso3835
++mpshost+E-10CKI18056.it.manchester.ac.uk
+-noshowtop
+-DELAY_MODE
+PATH
+-TYPDELAYS
+-NOSTDOUT
+-NOCOPYRIGHT
+-neg_tchk
+-nonotifier
+-sdf_NOCheck_celltype
+-access
++r
+-access
++w
+-access
++c
+-pulse_e
+100
+-pulse_r
+100
+-neverwarn
+-timescale
+1ns/10ps
+-nostdout
+-nocopyright
+-MESSAGES
+-XLMODE
+./xcelium.d/run.lnx8664.21.03.d
+-RUNMODE
+-CDSLIB
+./xcelium.d/run.lnx8664.21.03.d/cds.lib
+-HDLVAR
+./xcelium.d/run.lnx8664.21.03.d/hdl.var
+-WORK
+worklib
+-HASXLMODE

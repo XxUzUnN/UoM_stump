@@ -1,0 +1,50 @@
+// Verilog HDL and netlist files of
+// "Stump Stump_test functional"
+
+// HDL models
+
+// HDL file - Stump, Stump_registers, functional.
+/home/f93937xl/Cadence/COMP22111/Stump/Stump_registers/functional/verilog.v
+
+// HDL file - Stump, Stump_control_decode, functional.
+/home/f93937xl/Cadence/COMP22111/Stump/Stump_control_decode/functional/verilog.v
+
+// HDL file - Stump, Stump_FSM, functional.
+/home/f93937xl/Cadence/COMP22111/Stump/Stump_FSM/functional/verilog.v
+
+// HDL file for Stump, Stump_test, functional.
+/home/f93937xl/Cadence/COMP22111/Stump/Stump_test/functional/verilog.v
+
+
+// HDL file for Stump, Stump, functional.
+/home/f93937xl/Cadence/COMP22111/Stump/Stump/functional/verilog.v
+
+
+// HDL file for Stump, Stump_datapath, functional.
+/home/f93937xl/Cadence/COMP22111/Stump/Stump_datapath/functional/verilog.v
+
+
+// HDL file for Stump, Stump_control, functional.
+/home/f93937xl/Cadence/COMP22111/Stump/Stump_control/functional/verilog.v
+
+
+
+// End HDL models
+
+// Netlisted models
+
+// netlist file - Stump, Stump_control, functional.
+ihnl/cds0/netlist
+// netlist file - Stump, Stump_datapath, functional.
+ihnl/cds1/netlist
+// netlist file - Stump, Stump, functional.
+ihnl/cds2/netlist
+// netlist file - Stump, Stump_test, functional.
+ihnl/cds3/netlist
+
+
+// End HDL models
+
+// globals file 
+hdlFilesDir/cds_globals.v
+

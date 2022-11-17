@@ -25,13 +25,26 @@ module Stump (input  wire        clk,		// System clock
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -*/
 /* Declarations of any internal signals and buses used                        */
 
+wire  [15:0]     ir;
+wire                execute;	 // current state
+wire                memory;
+wire                ext_op;		      
+wire                reg_write;	 // register write enable
+wire  [2:0]         dest;		 // destination register		      
+wire  [2:0]         srcA;		 // Source register operand A
+wire  [2:0]         srcB;		 // Source register operand B
+wire  [1:0]         shift_op;
+wire                opB_mux_sel;     // operandB mux select
+wire  [2:0]         alu_func;	 // function derived from ir
+wire                cc_en;		 // cc register enable
 
 
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -*/
 /* Instantiate modules here                                                   */
 
-
+Stump_control control(rst,clk,cc,ir,fetch,execute,memory,ext_op,reg_write,dest,srcA,srcB,shift_op,opB_mux_sel,alu_func,cc_en,mem_ren,mem_wen);
+Stump_datapath datapath(clk,rst,data_in,fetch,execute,memory,ext_op,opB_mux_sel,shift_op,alu_func,cc_en,reg_write,dest,srcA,srcB,srcC,ir,data_out,address,regC,cc);
 
 
 

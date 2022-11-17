@@ -1,0 +1,177 @@
+TOOL:	xmxlmode	21.03-s009: Started on Nov 17, 2022 at 16:30:26 GMT
+/cadtools5/cds_root/XCELIUM2103/tools.lnx86/bin/64bit/ncxlmode
+	+delay_mode_path
+	+typdelays
+	-y
+	/cadtools5/xil_cds_design_kits/verilog/unisims
+	+libext+.v
+	-l
+	simout.tmp
+	/home/f93937xl/Cadence/COMP22111/Stump_test_run3/testfixture.template
+	-f /home/f93937xl/Cadence/COMP22111/Stump_test_run3/verilog.inpfiles
+		/home/f93937xl/Cadence/COMP22111/Stump/Stump_registers/functional/verilog.v
+		/home/f93937xl/Cadence/COMP22111/Stump/Stump_control_decode/functional/verilog.v
+		/home/f93937xl/Cadence/COMP22111/Stump/Stump_FSM/functional/verilog.v
+		/home/f93937xl/Cadence/COMP22111/Stump/Stump_test/functional/verilog.v
+		/home/f93937xl/Cadence/COMP22111/Stump/Stump/functional/verilog.v
+		/home/f93937xl/Cadence/COMP22111/Stump/Stump_datapath/functional/verilog.v
+		/home/f93937xl/Cadence/COMP22111/Stump/Stump_control/functional/verilog.v
+		ihnl/cds0/netlist
+		ihnl/cds1/netlist
+		ihnl/cds2/netlist
+		ihnl/cds3/netlist
+		hdlFilesDir/cds_globals.v
+	-f /netopt/info/courses/COMP22111/JULY2022/Cadence/reffiles/include
+		/cadtools5/Xilinx_14.7/14.7/ISE_DS/ISE/verilog/src/glbl.v
+		+incdir+..
+		+nccdslib+../cds.lib
+	+nostdout
+	+nocopyright
+	+ncvlogargs+" -neverwarn -nostdout -nocopyright "
+	+ncelabargs+" -neg_tchk  -nonotifier  -sdf_NOCheck_celltype  -access +r  -access +w  -access +c  -pulse_e 100  -pulse_r 100  -neverwarn  -timescale 1ns/10ps -nostdout -nocopyright"
+	+ncsimargs+" -neverwarn  -nocopyright -gui -input /home/f93937xl/Cadence/COMP22111/Stump_test_run3/.simTmpNCCmd "
+	+mpssession+virtuoso3835
+	+mpshost+E-10CKI18056.it.manchester.ac.uk
+xmxlmode: *W,OPDEPRREN: Command Line Option (+nccdslib+../cds.lib) is deprecated. Use (+xmcdslib+../cds.lib) instead.
+xmxlmode: *W,OPDEPRREN: Command Line Option (+ncvlogargs+ -neverwarn -nostdout -nocopyright ) is deprecated. Use (+xmvlogargs+ -neverwarn -nostdout -nocopyright ) instead.
+xmxlmode: *W,OPDEPRREN: Command Line Option (+ncelabargs+ -neg_tchk  -nonotifier  -sdf_NOCheck_celltype  -access +r  -access +w  -access +c  -pulse_e 100  -pulse_r 100  -neverwarn  -timescale 1ns/10ps -nostdout -nocopyright) is deprecated. Use (+xmelabargs+ -neg_tchk  -nonotifier  -sdf_NOCheck_celltype  -access +r  -access +w  -access +c  -pulse_e 100  -pulse_r 100  -neverwarn  -timescale 1ns/10ps -nostdout -nocopyright) instead.
+xmxlmode: *W,OPDEPRREN: Command Line Option (+ncsimargs+ -neverwarn  -nocopyright -gui -input /home/f93937xl/Cadence/COMP22111/Stump_test_run3/.simTmpNCCmd ) is deprecated. Use (+xmsimargs+ -neverwarn  -nocopyright -gui -input /home/f93937xl/Cadence/COMP22111/Stump_test_run3/.simTmpNCCmd ) instead.
+Recompiling... reason: file '../Stump/Stump_ALU/functional/verilog.v' is newer than expected.
+	expected: Mon Oct 17 17:11:54 2022
+	actual:   Thu Nov 17 16:01:51 2022
+	Total errors/warnings found outside modules and primitives:
+		errors: 0, warnings: 1
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+		Caching library 'worklib' ....... Done
+	Building instance overlay tables: .................... Done
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                 Instances  Unique
+		Modules:                12      12
+		Primitives:             13       3
+		Registers:              51      51
+		Scalar wires:           28       -
+		Expanded wires:         18       2
+		Vectored wires:         19       -
+		Always blocks:          15      15
+		Initial blocks:         15      15
+		Cont. assignments:       9      12
+		Pseudo assignments:      5       5
+		Simulation timescale:  1ps
+	Writing initial simulation snapshot: worklib.test:template
+
+-------------------------------------
+Relinquished control to SimVision...
+xcelium> 
+xcelium> source /cadtools5/cds_root/XCELIUM2103/tools/xcelium/files/xmsimrc
+xcelium> database -open shmWave -shm -default -into shm.db
+Created default SHM database shmWave
+xcelium> probe -create -shm test.top  -all   -depth 1
+Created probe 1
+xcelium> probe -create cds_globals -shm
+Created probe 2
+xcelium> probe -create -shm test.top.memory
+Created probe 3
+xcelium> run
+Running test 3
+               15000 PC := 0000
+               25000 PC := 0001
+               35000 PC := 0023
+               45000 PC := 0024
+               65000 PC := 0025
+               85000 PC := 0026
+              115000 PC := 0027
+              135000 PC := 0028
+              145000 Address 0000  := 0000
+              155000 Address 0000  := 402a
+              165000 PC := 0029
+              185000 PC := 002a
+              195000 Address 0000  := 0000
+              205000 Address 0001  := a015
+              215000 PC := 002b
+              245000 PC := 002c
+              265000 PC := 002d
+              275000 Address 0000  := 0000
+              285000 Address 0002  := c02a
+              295000 PC := 002e
+              315000 PC := 002f
+              325000 Address 0000  := 0000
+              335000 Address 0003  := e015
+              345000 PC := 0030
+              375000 PC := 0031
+              395000 PC := 0032
+              405000 Address 0000  := 0000
+              415000 Address 0004  := 002a
+              425000 PC := 0033
+              445000 PC := 0034
+              455000 Address 0000  := 0000
+              465000 Address 0005  := 0015
+              475000 PC := 0035
+              505000 PC := 0036
+              525000 PC := 0037
+              535000 Address 0000  := 0000
+              545000 Address 0006  := 4055
+              555000 PC := 0038
+              575000 PC := 0039
+              585000 Address 0000  := 0000
+              595000 Address 0007  := a02a
+              605000 PC := 003a
+              625000 PC := 003b
+              635000 Address 0000  := 0000
+              645000 Address 0008  := 5015
+              655000 PC := 003c
+              675000 PC := 003d
+              685000 Address 0000  := 0000
+              695000 Address 0009  := a80a
+              705000 PC := 003e
+              725000 PC := 003f
+              745000 PC := 0040
+              755000 Address 0000  := 0000
+              765000 Address 000a  := 0001
+              775000 PC := 0041
+              795000 PC := 0042
+              815000 PC := 0043
+              835000 PC := 0044
+              845000 Address 0000  := 0000
+              855000 Address 000b  := 0005
+              865000 PC := 0045
+              885000 PC := 0046
+              895000 Address 0000  := 0000
+              905000 Address 000c  := 0002
+              915000 PC := 0047
+              935000 PC := 0048
+              955000 PC := 0049
+              975000 PC := 004a
+              985000 Address 0000  := 0000
+              995000 Address 000d  := ffff
+             1005000 PC := 004b
+             1025000 PC := 004c
+             1045000 PC := 004d
+             1055000 Address 0000  := 0000
+             1065000 Address 000e  := 0003
+             1075000 PC := 004e
+             1095000 PC := 004f
+             1115000 PC := 0050
+             1135000 PC := 0051
+             1155000 PC := 0052
+             1175000 PC := 0053
+             1185000 Address 0000  := 0000
+             1195000 Address 000f  := ffff
+             1205000 PC := 0054
+             1215000 Address 0000  := 0000
+             1225000 Address ffff  := 0000
+             1235000 PC := 0055
+             1245000 PC := 0054
+             1255000 PC := 0055
+             1265000 PC := 0054
+             1275000 PC := 0055
+             1285000 PC := 0054
+             1295000 PC := 0055
+             1305000 PC := 0054
+             1315000 PC := 0055
+Simulation stopped via $stop(1) at time 1325 NS + 0
+xcelium> ^C
+xcelium> exit
+TOOL:	xmxlmode	21.03-s009: Exiting on Nov 17, 2022 at 16:31:00 GMT  (total: 00:00:34)

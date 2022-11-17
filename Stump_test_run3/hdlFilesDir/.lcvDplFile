@@ -1,0 +1,25 @@
+tmLCVDPLList = '((nil viewType "netlist" viewName "functional"
+    cellName "Stump_FSM" libName "Stump"
+    ) 
+    (nil viewType "netlist" viewName "functional"
+    cellName "Stump_control_decode" libName "Stump"
+    ) 
+    (nil viewType "netlist" viewName "functional"
+    cellName "Stump_registers" libName "Stump"
+    ) 
+    (nil viewType "netlist" viewName "functional"
+    cellName "Stump_test" libName "Stump"
+    ) 
+    (nil viewType "netlist" viewName "functional"
+    cellName "Stump" libName "Stump"
+    )
+    (nil viewType "netlist" viewName "functional"
+    cellName "Stump_datapath" libName "Stump"
+    ) 
+    (nil viewType "netlist" viewName "functional"
+    cellName "Stump_control" libName "Stump"
+    )
+)
+xxxInternalGlobAliasList = '(nil globalExists t)
+hnlVerilogCdsGlobalsFileName = "cds_globals"
+hnlVerilogCdsGlobalsModuleName = "cds_globals"

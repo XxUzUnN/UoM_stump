@@ -1,0 +1,23 @@
+simFuncDPLList = '(
+    (nil libName "Stump" cellName "Stump_control"
+    viewName "functional" filePath "/home/f93937xl/Cadence/COMP22111/Stump/Stump_control/functional/verilog.v"
+    ) 
+    (nil libName "Stump" cellName "Stump_datapath"
+    viewName "functional" filePath "/home/f93937xl/Cadence/COMP22111/Stump/Stump_datapath/functional/verilog.v"
+    ) 
+    (nil libName "Stump" cellName "Stump"
+    viewName "functional" filePath "/home/f93937xl/Cadence/COMP22111/Stump/Stump/functional/verilog.v"
+    ) 
+    (nil libName "Stump" cellName "Stump_test"
+    viewName "functional" filePath "/home/f93937xl/Cadence/COMP22111/Stump/Stump_test/functional/verilog.v"
+    ) 
+    (nil libName "Stump" cellName "Stump_registers"
+    viewName "functional" filePath "/home/f93937xl/Cadence/COMP22111/Stump/Stump_registers/functional/verilog.v"
+    )
+    (nil libName "Stump" cellName "Stump_control_decode"
+    viewName "functional" filePath "/home/f93937xl/Cadence/COMP22111/Stump/Stump_control_decode/functional/verilog.v"
+    ) 
+    (nil libName "Stump" cellName "Stump_FSM"
+    viewName "functional" filePath "/home/f93937xl/Cadence/COMP22111/Stump/Stump_FSM/functional/verilog.v"
+    )
+)

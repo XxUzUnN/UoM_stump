@@ -1,0 +1,12 @@
+CADENCE IHNL11140
+$model
+Stump/Stump_test/functional Stump_test
+Stump/Stump_control/functional Stump_control
+Stump/Stump_datapath/functional Stump_datapath
+Stump/Stump/functional Stump
+$endmodel
+$net
+VDD! cds_globals.VDD_
+$endnet
+$param
+$endparam

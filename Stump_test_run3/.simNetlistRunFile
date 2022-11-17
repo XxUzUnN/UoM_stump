@@ -1,0 +1,20 @@
+simVerilogNetlistFileList = '(
+    (("Stump" "Stump_test") 
+	("cds3/netlist" "cds3/map" "functional")
+    ) 
+    (("Stump" "Stump") 
+	("cds2/netlist" "cds2/map" "functional")
+    ) 
+    (("Stump" "Stump_datapath") 
+	("cds1/netlist" "cds1/map" "functional")
+    ) 
+    (("Stump" "Stump_control") 
+	("cds0/netlist" "cds0/map" "functional")
+    )
+)
+simVerilogNetlistFileLibList = '("Stump")
+simVerilogNetlistFileCellList = '(("Stump" 
+	("Stump_control" "Stump_datapath" "Stump" "Stump_test")
+    )
+)
+hnlIncrementalDirectory = '"ihnl"

@@ -1,0 +1,11 @@
+cellViewCounterTable = makeTable('cellViewCounterTableType nil)
+cellViewCounterTable['("Stump" "Stump_datapath" "functional" )] =  3083
+cellViewCounterTable['("Stump" "Stump_control" "functional" )] =  1850
+cellViewCounterTable['("Stump" "Stump_registers" "symbol" )] =  236
+cellViewCounterTable['("Stump" "Stump" "symbol" )] =  231
+cellViewCounterTable['("Stump" "Stump_datapath" "symbol" )] =  391
+cellViewCounterTable['("Stump" "Stump_control_decode" "symbol" )] =  274
+cellViewCounterTable['("Stump" "Stump_FSM" "symbol" )] =  87
+cellViewCounterTable['("Stump" "Stump_test" "functional" )] =  802
+cellViewCounterTable['("Stump" "Stump_control" "symbol" )] =  285
+cellViewCounterTable['("Stump" "Stump" "functional" )] =  3349

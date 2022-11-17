@@ -1,0 +1,18 @@
+
+`timescale 1ns / 10ps
+
+module test;
+
+
+// Buses in the design
+
+wire  [15:0]  data_out;
+
+wire  [15:0]  address;
+
+wire  [15:0]  data_in;
+
+
+
+Stump_test top(); 
+ 

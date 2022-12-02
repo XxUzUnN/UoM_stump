@@ -2,7 +2,7 @@
 
 #CELL
 * Stump_control_decode *
-controldecode
+decode
 
 #CELL
 * Stump_FSM *

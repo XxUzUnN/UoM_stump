@@ -1,0 +1,7 @@
+INFILE=/home/f93937xl/Cadence/COMP22111/xilinx_compile/stump_fpga_top.ncd
+OUTFILE=/home/f93937xl/Cadence/COMP22111/xilinx_compile/stump_fpga_top.bit
+FAMILY=Spartan6
+PART=xc6slx4-2cpg196
+WORKINGDIR=/home/f93937xl/Cadence/COMP22111/xilinx_compile
+LICENSE=ISE
+USER_INFO=174117186_174117187_210717993_729

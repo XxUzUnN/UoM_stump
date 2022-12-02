@@ -1,0 +1,20 @@
+REPORT LOG FILE FOR CELL  on Nov 30 15:29:46 2022
+WORKING DIRECTORY IS /home/f93937xl/Cadence/COMP22111/xilinx_compile 
+Arguments to Xilinx compile script are :-
+-i xc6slx4-cpg196-2 /verilog.inpfiles
+. /cadtools5/Xilinx_14.7/14.7/ISE_DS/common/.settings64.sh /cadtools5/Xilinx_14.7/14.7/ISE_DS/common
+. /cadtools5/Xilinx_14.7/14.7/ISE_DS/EDK/.settings64.sh /cadtools5/Xilinx_14.7/14.7/ISE_DS/EDK
+. /cadtools5/Xilinx_14.7/14.7/ISE_DS/PlanAhead/.settings64.sh /cadtools5/Xilinx_14.7/14.7/ISE_DS/PlanAhead
+. /cadtools5/Xilinx_14.7/14.7/ISE_DS/ISE/.settings64.sh /cadtools5/Xilinx_14.7/14.7/ISE_DS/ISE
+XILINX PART IS /verilog.inpfiles
+Design is xc6slx4-cpg196-2
+Arguments to Xilinx compile script are :-
+-s xc6slx4-cpg196-2 /verilog.inpfiles
+XILINX PART IS /verilog.inpfiles
+Design is xc6slx4-cpg196-2
+Release 14.7 - ngdbuild P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+ERROR:NgdBuild:653 - An invalid target architecture "/verilog.inpfiles" was
+   given in the "-p" option value.  Please consult the Xilinx Programmable Logic
+   Data Book to find a legal target package. 
+Ngdbuild failed

@@ -1,0 +1,290 @@
+Release 14.7 Map P.20131013 (lin64)
+Xilinx Mapping Report File for Design 'stump_fpga_top'
+
+Design Information
+------------------
+Command Line   : map -u -p xc6slx4-cpg196-2 -pr b -c 100 -w stump_fpga_top.ngd 
+Target Device  : xc6slx4
+Target Package : cpg196
+Target Speed   : -2
+Mapper Version : spartan6 -- $Revision: 1.55 $
+Mapped Date    : Wed Nov 30 15:42:47 2022
+
+Design Summary
+--------------
+Number of errors:      0
+Number of warnings:    2
+Slice Logic Utilization:
+  Number of Slice Registers:                 1,064 out of   4,800   22%
+    Number used as Flip Flops:               1,062
+    Number used as Latches:                      1
+    Number used as Latch-thrus:                  0
+    Number used as AND/OR logics:                1
+  Number of Slice LUTs:                      2,065 out of   2,400   86%
+    Number used as logic:                    2,058 out of   2,400   85%
+      Number using O6 output only:           1,683
+      Number using O5 output only:              54
+      Number using O5 and O6:                  321
+      Number used as ROM:                        0
+    Number used as Memory:                       0 out of   1,200    0%
+    Number used exclusively as route-thrus:      7
+      Number with same-slice register load:      1
+      Number with same-slice carry load:         5
+      Number with other load:                    1
+
+Slice Logic Distribution:
+  Number of occupied Slices:                   576 out of     600   96%
+  Number of MUXCYs used:                       280 out of   1,200   23%
+  Number of LUT Flip Flop pairs used:        2,123
+    Number with an unused Flip Flop:         1,099 out of   2,123   51%
+    Number with an unused LUT:                  58 out of   2,123    2%
+    Number of fully used LUT-FF pairs:         966 out of   2,123   45%
+    Number of unique control sets:              82
+    Number of slice register sites lost
+      to control set restrictions:             137 out of   4,800    2%
+
+  A LUT Flip Flop pair for this architecture represents one LUT paired with
+  one Flip Flop within a slice.  A control set is a unique combination of
+  clock, reset, set, and enable signals for a registered element.
+  The Slice Logic Distribution report is not meaningful if the design is
+  over-mapped for a non-slice resource or if Placement fails.
+
+IO Utilization:
+  Number of bonded IOBs:                        63 out of     106   59%
+    Number of LOCed IOBs:                       63 out of      63  100%
+    IOB Flip Flops:                             24
+
+Specific Feature Utilization:
+  Number of RAMB16BWERs:                         8 out of      12   66%
+  Number of RAMB8BWERs:                          3 out of      24   12%
+  Number of BUFIO2/BUFIO2_2CLKs:                 0 out of      32    0%
+  Number of BUFIO2FB/BUFIO2FB_2CLKs:             0 out of      32    0%
+  Number of BUFG/BUFGMUXs:                       2 out of      16   12%
+    Number used as BUFGs:                        2
+    Number used as BUFGMUX:                      0
+  Number of DCM/DCM_CLKGENs:                     0 out of       4    0%
+  Number of ILOGIC2/ISERDES2s:                   8 out of     200    4%
+    Number used as ILOGIC2s:                     8
+    Number used as ISERDES2s:                    0
+  Number of IODELAY2/IODRP2/IODRP2_MCBs:         0 out of     200    0%
+  Number of OLOGIC2/OSERDES2s:                  16 out of     200    8%
+    Number used as OLOGIC2s:                    16
+    Number used as OSERDES2s:                    0
+  Number of BSCANs:                              0 out of       4    0%
+  Number of BUFHs:                               0 out of     128    0%
+  Number of BUFPLLs:                             0 out of       8    0%
+  Number of BUFPLL_MCBs:                         0 out of       4    0%
+  Number of DSP48A1s:                            0 out of       8    0%
+  Number of ICAPs:                               0 out of       1    0%
+  Number of PCILOGICSEs:                         0 out of       2    0%
+  Number of PLL_ADVs:                            0 out of       2    0%
+  Number of PMVs:                                0 out of       1    0%
+  Number of STARTUPs:                            0 out of       1    0%
+  Number of SUSPEND_SYNCs:                       0 out of       1    0%
+
+Average Fanout of Non-Clock Nets:                4.86
+
+Peak Memory Usage:  689 MB
+Total REAL time to MAP completion:  30 secs 
+Total CPU time to MAP completion:   29 secs 
+
+Table of Contents
+-----------------
+Section 1 - Errors
+Section 2 - Warnings
+Section 3 - Informational
+Section 4 - Removed Logic Summary
+Section 5 - Removed Logic
+Section 6 - IOB Properties
+Section 7 - RPMs
+Section 8 - Guide Report
+Section 9 - Area Group and Partition Summary
+Section 10 - Timing Report
+Section 11 - Configuration String Information
+Section 12 - Control Set Information
+Section 13 - Utilization by Hierarchy
+
+Section 1 - Errors
+------------------
+
+Section 2 - Warnings
+--------------------
+WARNING:Security:43 - No license file was found in the standard Xilinx license
+directory.
+WARNING:Security:44 - Since no license file was found,
+WARNING:Security:42 - Your software subscription period has lapsed. Your current
+version of Xilinx tools will continue to function, but you no longer qualify for
+Xilinx software updates or new releases.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net cpu/opB_mux_sel is sourced
+   by a combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:2410 - This design is using one or more 9K Block RAMs
+   (RAMB8BWER).  9K Block RAM initialization data, both user defined and
+   default, may be incorrect and should not be used.  For more information,
+   please reference Xilinx Answer Record 39999.
+
+Section 3 - Informational
+-------------------------
+INFO:Security:50 - The XILINXD_LICENSE_FILE environment variable is set to
+'2100@cadmaster.cs.man.ac.uk'.
+INFO:Security:53 - The LM_LICENSE_FILE environment variable is not set.
+INFO:Security:54 - 'xc6slx4' is a WebPack part.
+INFO:LIT:243 - Logical network epp_output_pads<1> has no load.
+INFO:LIT:395 - The above info message is repeated 1 more times for the following
+   (max. 5 shown):
+   scl_buf_0/O
+   To see the details of these info messages, please use the -detail switch.
+INFO:MapLib:562 - No environment variables are currently set.
+INFO:LIT:244 - All of the single ended outputs in this design are using slew
+   rate limited output drivers. The delay on speed critical single ended outputs
+   can be dramatically reduced by designating them as fast outputs.
+INFO:Pack:1716 - Initializing temperature to 85.000 Celsius. (default - Range:
+   0.000 to 85.000 Celsius)
+INFO:Pack:1720 - Initializing voltage to 1.140 Volts. (default - Range: 1.140 to
+   1.260 Volts)
+INFO:Map:215 - The Interim Design Summary has been generated in the MAP Report
+   (.mrp).
+INFO:Pack:1650 - Map created a placed design.
+
+Section 4 - Removed Logic Summary
+---------------------------------
+   2 block(s) optimized away
+
+Section 5 - Removed Logic
+-------------------------
+
+Optimized Block(s):
+TYPE 		BLOCK
+VCC 		XST_VCC
+GND 		ground_2
+
+To enable printing of redundant blocks removed and signals merged, set the
+detailed map report option and rerun map.
+
+Section 6 - IOB Properties
+--------------------------
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+| IOB Name                           | Type             | Direction | IO Standard          | Diff  | Drive    | Slew | Reg (s)      | Resistor | IOB      |
+|                                    |                  |           |                      | Term  | Strength | Rate |              |          | Delay    |
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+| S6_btn0_pad                        | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| S6_btn1_pad                        | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| S6_leds_pads<0>                    | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| S6_leds_pads<1>                    | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| S6_leds_pads<2>                    | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| S6_leds_pads<3>                    | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| blue_en_pad                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| buzzer_pad                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| clk_pad                            | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| epp_data_pads<0>                   | IOB              | BIDIR     | LVCMOS25             |       | 12       | SLOW | IFF          |          |          |
+|                                    |                  |           |                      |       |          |      | OFF          |          |          |
+| epp_data_pads<1>                   | IOB              | BIDIR     | LVCMOS25             |       | 12       | SLOW | IFF          |          |          |
+|                                    |                  |           |                      |       |          |      | OFF          |          |          |
+| epp_data_pads<2>                   | IOB              | BIDIR     | LVCMOS25             |       | 12       | SLOW | IFF          |          |          |
+|                                    |                  |           |                      |       |          |      | OFF          |          |          |
+| epp_data_pads<3>                   | IOB              | BIDIR     | LVCMOS25             |       | 12       | SLOW | IFF          |          |          |
+|                                    |                  |           |                      |       |          |      | OFF          |          |          |
+| epp_data_pads<4>                   | IOB              | BIDIR     | LVCMOS25             |       | 12       | SLOW | IFF          |          |          |
+|                                    |                  |           |                      |       |          |      | OFF          |          |          |
+| epp_data_pads<5>                   | IOB              | BIDIR     | LVCMOS25             |       | 12       | SLOW | IFF          |          |          |
+|                                    |                  |           |                      |       |          |      | OFF          |          |          |
+| epp_data_pads<6>                   | IOB              | BIDIR     | LVCMOS25             |       | 12       | SLOW | IFF          |          |          |
+|                                    |                  |           |                      |       |          |      | OFF          |          |          |
+| epp_data_pads<7>                   | IOB              | BIDIR     | LVCMOS25             |       | 12       | SLOW | IFF          |          |          |
+|                                    |                  |           |                      |       |          |      | OFF          |          |          |
+| epp_input_pads<0>                  | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| epp_input_pads<1>                  | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| epp_input_pads<2>                  | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| epp_output_pads<0>                 | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| green_en_pad                       | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| key_cols_pads<0>                   | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| key_cols_pads<1>                   | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| key_cols_pads<2>                   | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| key_cols_pads<3>                   | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| key_cols_pads<4>                   | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| key_rows_pads<0>                   | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| key_rows_pads<1>                   | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| key_rows_pads<2>                   | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| key_rows_pads<3>                   | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| lcd_data_pads<0>                   | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | OFF          |          |          |
+| lcd_data_pads<1>                   | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | OFF          |          |          |
+| lcd_data_pads<2>                   | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | OFF          |          |          |
+| lcd_data_pads<3>                   | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | OFF          |          |          |
+| lcd_data_pads<4>                   | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | OFF          |          |          |
+| lcd_data_pads<5>                   | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | OFF          |          |          |
+| lcd_data_pads<6>                   | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | OFF          |          |          |
+| lcd_data_pads<7>                   | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | OFF          |          |          |
+| lcd_e_pad                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| lcd_rs_pad                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| lcd_rw_pad                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| red_en_pad                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| rgb_col_pads<0>                    | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| rgb_col_pads<1>                    | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| rgb_col_pads<2>                    | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| rgb_col_pads<3>                    | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| rgb_col_pads<4>                    | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| rgb_col_pads<5>                    | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| rgb_col_pads<6>                    | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| rgb_col_pads<7>                    | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| rgb_row_pads<0>                    | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| rgb_row_pads<1>                    | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| rgb_row_pads<2>                    | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| rgb_row_pads<3>                    | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| rgb_row_pads<4>                    | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| rgb_row_pads<5>                    | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| rgb_row_pads<6>                    | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| rgb_row_pads<7>                    | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| scl_pad                            | IOB              | BIDIR     | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| sda_pad                            | IOB              | BIDIR     | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| shaker_pad                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| sw_led_en_pad                      | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+Section 7 - RPMs
+----------------
+
+Section 8 - Guide Report
+------------------------
+Guide not run on this design.
+
+Section 9 - Area Group and Partition Summary
+--------------------------------------------
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+Area Group Information
+----------------------
+
+  No area groups were found in this design.
+
+----------------------
+
+Section 10 - Timing Report
+--------------------------
+A logic-level (pre-route) timing report can be generated by using Xilinx static
+timing analysis tools, Timing Analyzer (GUI) or TRCE (command line), with the
+mapped NCD and PCF files. Please note that this timing report will be generated
+using estimated delay information. For accurate numbers, please generate a
+timing report with the post Place and Route NCD file.
+
+For more information about the Timing Analyzer, consult the Xilinx Timing
+Analyzer Reference Manual; for more information about TRCE, consult the Xilinx
+Command Line Tools User Guide "TRACE" chapter.
+
+Section 11 - Configuration String Details
+-----------------------------------------
+Use the "-detail" map option to print out Configuration Strings
+
+Section 12 - Control Set Information
+------------------------------------
+Use the "-detail" map option to print out Control Set Information.
+
+Section 13 - Utilization by Hierarchy
+-------------------------------------
+Use the "-detail" map option to print out the Utilization by Hierarchy section.

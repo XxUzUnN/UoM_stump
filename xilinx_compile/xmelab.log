@@ -1,0 +1,13 @@
+xmelab(64): 21.03-s009: (c) Copyright 1995-2021 Cadence Design Systems, Inc.
+xmelab: *W,NCEXDEP: Executable (ncelab) is deprecated. Use (xmelab) instead.
+xmelab: *W,CUSRCH: Resolved design unit 'Stump' at 'cpu' to 'Stump.Stump:functional' through a global search of all libraries.
+xmelab: *W,CUSRCH: Resolved design unit 'Stump_datapath' at 'datapath' to 'Stump.Stump_datapath:functional' through a global search of all libraries.
+xmelab: *W,CUSRCH: Resolved design unit 'Stump_registers' at 'registers' to 'Stump.Stump_registers:functional' through a global search of all libraries.
+xmelab: *W,CUSRCH: Resolved design unit 'Stump_shifter' at 'shifter' to 'Stump.Stump_shifter:functional' through a global search of all libraries.
+xmelab: *W,CUSRCH: Resolved design unit 'Stump_ALU' at 'alu' to 'Stump.Stump_ALU:functional' through a global search of all libraries.
+xmelab: *W,CUSRCH: Resolved design unit 'Stump_control' at 'control' to 'Stump.Stump_control:functional' through a global search of all libraries.
+xmelab: *W,CUSRCH: Resolved design unit 'Stump_FSM' at 'fsm' to 'Stump.Stump_FSM:functional' through a global search of all libraries.
+xmelab: *W,CUSRCH: Resolved design unit 'Stump_control_decode' at 'decode' to 'Stump.Stump_control_decode:functional' through a global search of all libraries.
+xmelab: *W,CUSRCH: Resolved design unit 'memory_stump' at 'memory' to 'fpga.memory_stump:functional' through a global search of all libraries.
+xmelab: *W,CUSRCH: Resolved design unit 'ackie' at 'ackie_interface' to 'fpga.ackie:functional' through a global search of all libraries.
+xmelab: *W,CUSRCH: Resolved design unit 'emulated_uart' at 'uart' to 'fpga.emulated_uart:functional' through a global search of all libraries.

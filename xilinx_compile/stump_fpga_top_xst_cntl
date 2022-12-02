@@ -1,0 +1,13 @@
+run 
+-ifn stump_fpga_top_xst_incfiles 
+-ifmt mixed -top stump_fpga_top 
+-ofn stump_fpga_top.ngc 
+-ofmt NGC 
+-p xc6slx4-cpg196-2 
+-opt_mode Speed 
+-opt_level 1
+-iobuf no
+-signal_encoding user
+-fsm_encoding user
+-vlgincdir $HOME/Cadence/COMP22111
+

@@ -1,0 +1,1949 @@
+REPORT LOG FILE FOR CELL stump_fpga_top on Nov 30 15:42:24 2022
+WORKING DIRECTORY IS /home/f93937xl/Cadence/COMP22111/xilinx_compile 
+Arguments to Xilinx compile script are :-
+-p stump_fpga_top xc6slx4-cpg196-2 fpga
+. /cadtools5/Xilinx_14.7/14.7/ISE_DS/common/.settings64.sh /cadtools5/Xilinx_14.7/14.7/ISE_DS/common
+. /cadtools5/Xilinx_14.7/14.7/ISE_DS/EDK/.settings64.sh /cadtools5/Xilinx_14.7/14.7/ISE_DS/EDK
+. /cadtools5/Xilinx_14.7/14.7/ISE_DS/PlanAhead/.settings64.sh /cadtools5/Xilinx_14.7/14.7/ISE_DS/PlanAhead
+. /cadtools5/Xilinx_14.7/14.7/ISE_DS/ISE/.settings64.sh /cadtools5/Xilinx_14.7/14.7/ISE_DS/ISE
+XILINX PART IS xc6slx4-cpg196-2
+Design is stump_fpga_top
+xmvlog(64): 21.03-s009: (c) Copyright 1995-2021 Cadence Design Systems, Inc.
+xmvlog: *W,NCEXDEP: Executable (ncvlog) is deprecated. Use (xmvlog) instead.
+xmelab(64): 21.03-s009: (c) Copyright 1995-2021 Cadence Design Systems, Inc.
+xmelab: *W,NCEXDEP: Executable (ncelab) is deprecated. Use (xmelab) instead.
+xmelab: *W,CUSRCH: Resolved design unit 'Stump' at 'cpu' to 'Stump.Stump:functional' through a global search of all libraries.
+xmelab: *W,CUSRCH: Resolved design unit 'Stump_datapath' at 'datapath' to 'Stump.Stump_datapath:functional' through a global search of all libraries.
+xmelab: *W,CUSRCH: Resolved design unit 'Stump_registers' at 'registers' to 'Stump.Stump_registers:functional' through a global search of all libraries.
+xmelab: *W,CUSRCH: Resolved design unit 'Stump_shifter' at 'shifter' to 'Stump.Stump_shifter:functional' through a global search of all libraries.
+xmelab: *W,CUSRCH: Resolved design unit 'Stump_ALU' at 'alu' to 'Stump.Stump_ALU:functional' through a global search of all libraries.
+xmelab: *W,CUSRCH: Resolved design unit 'Stump_control' at 'control' to 'Stump.Stump_control:functional' through a global search of all libraries.
+xmelab: *W,CUSRCH: Resolved design unit 'Stump_FSM' at 'fsm' to 'Stump.Stump_FSM:functional' through a global search of all libraries.
+xmelab: *W,CUSRCH: Resolved design unit 'Stump_control_decode' at 'decode' to 'Stump.Stump_control_decode:functional' through a global search of all libraries.
+xmelab: *W,CUSRCH: Resolved design unit 'memory_stump' at 'memory' to 'fpga.memory_stump:functional' through a global search of all libraries.
+xmelab: *W,CUSRCH: Resolved design unit 'ackie' at 'ackie_interface' to 'fpga.ackie:functional' through a global search of all libraries.
+xmelab: *W,CUSRCH: Resolved design unit 'emulated_uart' at 'uart' to 'fpga.emulated_uart:functional' through a global search of all libraries.
+Release 14.7 - xst P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "stump_fpga_top_xst_incfiles"
+Input Format                       : mixed
+Verilog Include Directory          : /home/f93937xl/Cadence/COMP22111
+
+---- Target Parameters
+Output File Name                   : "stump_fpga_top.ngc"
+Output Format                      : NGC
+Target Device                      : xc6slx4-cpg196-2
+
+---- Source Options
+Top Module Name                    : stump_fpga_top
+Signal Encoding Algorithm          : user
+FSM Encoding Algorithm             : user
+
+---- Target Options
+Add IO Buffers                     : no
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "/home/f93937xl/Cadence/COMP22111/Stump/Stump/functional/verilog.v" into library work
+Parsing verilog file "/home/f93937xl/Cadence/COMP22111/Stump/Stump_definitions.v" included at line 7.
+Parsing module <Stump>.
+Analyzing Verilog file "/home/f93937xl/Cadence/COMP22111/Stump/Stump_ALU/functional/verilog.v" into library work
+Parsing verilog file "/home/f93937xl/Cadence/COMP22111/Stump/Stump_definitions.v" included at line 9.
+Parsing module <Stump_ALU>.
+Analyzing Verilog file "/home/f93937xl/Cadence/COMP22111/Stump/Stump_control/functional/verilog.v" into library work
+Parsing verilog file "/home/f93937xl/Cadence/COMP22111/Stump/Stump_definitions.v" included at line 10.
+Parsing module <Stump_control>.
+Analyzing Verilog file "/home/f93937xl/Cadence/COMP22111/Stump/Stump_datapath/functional/verilog.v" into library work
+Parsing module <Stump_datapath>.
+Analyzing Verilog file "/./home/f93937xl/Cadence/COMP22111/Stump/Stump_FSM/functional/verilog.v" into library work
+Parsing verilog file "/home/f93937xl/Cadence/COMP22111/Stump/Stump_definitions.v" included at line 12.
+Parsing module <Stump_FSM>.
+Analyzing Verilog file "/./home/f93937xl/Cadence/COMP22111/Stump/Stump_control_decode/functional/verilog.v" into library work
+Parsing verilog file "/home/f93937xl/Cadence/COMP22111/Stump/Stump_definitions.v" included at line 11.
+Parsing module <Stump_control_decode>.
+Analyzing Verilog file "/./home/f93937xl/Cadence/COMP22111/Stump/Stump_definitions.v" into library work
+Analyzing Verilog file "/./home/f93937xl/Cadence/COMP22111/Stump/Stump_registers/functional/verilog.v" into library work
+Parsing module <Stump_registers>.
+Analyzing Verilog file "/./home/f93937xl/Cadence/COMP22111/Stump/Stump_shifter/functional/verilog.v" into library work
+Parsing module <Stump_shifter>.
+Analyzing Verilog file "/./home/f93937xl/Cadence/COMP22111/fpga/ackie/functional/verilog.v" into library work
+Parsing module <ackie>.
+Analyzing Verilog file "/./home/f93937xl/Cadence/COMP22111/fpga/emulated_uart/functional/verilog.v" into library work
+Parsing module <emulated_uart>.
+Analyzing Verilog file "/./home/f93937xl/Cadence/COMP22111/fpga/memory_stump/functional/verilog.v" into library work
+Parsing module <memory_stump>.
+Analyzing Verilog file "/./home/f93937xl/Cadence/COMP22111/fpga/stump_fpga_top/functional/verilog.v" into library work
+Parsing module <stump_fpga_top>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <stump_fpga_top>.
+
+Elaborating module <Stump>.
+
+Elaborating module <Stump_datapath>.
+
+Elaborating module <Stump_registers>.
+WARNING:HDLCompiler:1127 - "/./home/f93937xl/Cadence/COMP22111/Stump/Stump_registers/functional/verilog.v" Line 31: Assignment to PC ignored, since the identifier is never used
+"/./home/f93937xl/Cadence/COMP22111/Stump/Stump_registers/functional/verilog.v" Line 52. $display  $time  PC := 0
+
+Elaborating module <Stump_shifter>.
+
+Elaborating module <Stump_ALU>.
+WARNING:HDLCompiler:413 - "/home/f93937xl/Cadence/COMP22111/Stump/Stump_ALU/functional/verilog.v" Line 43: Result of 32-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:413 - "/home/f93937xl/Cadence/COMP22111/Stump/Stump_datapath/functional/verilog.v" Line 58: Result of 32-bit expression is truncated to fit in 16-bit target.
+
+Elaborating module <Stump_control>.
+
+Elaborating module <Stump_FSM>.
+WARNING:HDLCompiler:413 - "/./home/f93937xl/Cadence/COMP22111/Stump/Stump_FSM/functional/verilog.v" Line 33: Result of 3-bit expression is truncated to fit in 2-bit target.
+
+Elaborating module <Stump_control_decode>.
+WARNING:HDLCompiler:1127 - "/./home/f93937xl/Cadence/COMP22111/fpga/stump_fpga_top/functional/verilog.v" Line 137: Assignment to gnd_0 ignored, since the identifier is never used
+
+Elaborating module <memory_stump>.
+WARNING:HDLCompiler:872 - "/./home/f93937xl/Cadence/COMP22111/fpga/memory_stump/functional/verilog.v" Line 245: Using initial value of WEnCPU_bp since it is never assigned
+WARNING:HDLCompiler:413 - "/./home/f93937xl/Cadence/COMP22111/fpga/memory_stump/functional/verilog.v" Line 596: Result of 4-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:413 - "/./home/f93937xl/Cadence/COMP22111/fpga/memory_stump/functional/verilog.v" Line 600: Result of 6-bit expression is truncated to fit in 5-bit target.
+WARNING:HDLCompiler:413 - "/./home/f93937xl/Cadence/COMP22111/fpga/memory_stump/functional/verilog.v" Line 605: Result of 10-bit expression is truncated to fit in 9-bit target.
+WARNING:HDLCompiler:413 - "/./home/f93937xl/Cadence/COMP22111/fpga/memory_stump/functional/verilog.v" Line 623: Result of 6-bit expression is truncated to fit in 5-bit target.
+WARNING:HDLCompiler:413 - "/./home/f93937xl/Cadence/COMP22111/fpga/memory_stump/functional/verilog.v" Line 624: Result of 6-bit expression is truncated to fit in 5-bit target.
+WARNING:HDLCompiler:413 - "/./home/f93937xl/Cadence/COMP22111/fpga/memory_stump/functional/verilog.v" Line 625: Result of 6-bit expression is truncated to fit in 5-bit target.
+WARNING:HDLCompiler:413 - "/./home/f93937xl/Cadence/COMP22111/fpga/memory_stump/functional/verilog.v" Line 627: Result of 6-bit expression is truncated to fit in 5-bit target.
+WARNING:HDLCompiler:413 - "/./home/f93937xl/Cadence/COMP22111/fpga/memory_stump/functional/verilog.v" Line 628: Result of 6-bit expression is truncated to fit in 5-bit target.
+WARNING:HDLCompiler:413 - "/./home/f93937xl/Cadence/COMP22111/fpga/memory_stump/functional/verilog.v" Line 629: Result of 6-bit expression is truncated to fit in 5-bit target.
+WARNING:HDLCompiler:413 - "/./home/f93937xl/Cadence/COMP22111/fpga/memory_stump/functional/verilog.v" Line 631: Result of 6-bit expression is truncated to fit in 5-bit target.
+WARNING:HDLCompiler:413 - "/./home/f93937xl/Cadence/COMP22111/fpga/memory_stump/functional/verilog.v" Line 632: Result of 6-bit expression is truncated to fit in 5-bit target.
+WARNING:HDLCompiler:413 - "/./home/f93937xl/Cadence/COMP22111/fpga/memory_stump/functional/verilog.v" Line 633: Result of 6-bit expression is truncated to fit in 5-bit target.
+WARNING:HDLCompiler:413 - "/./home/f93937xl/Cadence/COMP22111/fpga/memory_stump/functional/verilog.v" Line 635: Result of 6-bit expression is truncated to fit in 5-bit target.
+WARNING:HDLCompiler:413 - "/./home/f93937xl/Cadence/COMP22111/fpga/memory_stump/functional/verilog.v" Line 636: Result of 6-bit expression is truncated to fit in 5-bit target.
+WARNING:HDLCompiler:413 - "/./home/f93937xl/Cadence/COMP22111/fpga/memory_stump/functional/verilog.v" Line 637: Result of 6-bit expression is truncated to fit in 5-bit target.
+WARNING:HDLCompiler:413 - "/./home/f93937xl/Cadence/COMP22111/fpga/memory_stump/functional/verilog.v" Line 639: Result of 6-bit expression is truncated to fit in 5-bit target.
+WARNING:HDLCompiler:413 - "/./home/f93937xl/Cadence/COMP22111/fpga/memory_stump/functional/verilog.v" Line 640: Result of 6-bit expression is truncated to fit in 5-bit target.
+WARNING:HDLCompiler:413 - "/./home/f93937xl/Cadence/COMP22111/fpga/memory_stump/functional/verilog.v" Line 641: Result of 6-bit expression is truncated to fit in 5-bit target.
+WARNING:HDLCompiler:413 - "/./home/f93937xl/Cadence/COMP22111/fpga/memory_stump/functional/verilog.v" Line 643: Result of 6-bit expression is truncated to fit in 5-bit target.
+WARNING:HDLCompiler:413 - "/./home/f93937xl/Cadence/COMP22111/fpga/memory_stump/functional/verilog.v" Line 644: Result of 6-bit expression is truncated to fit in 5-bit target.
+WARNING:HDLCompiler:413 - "/./home/f93937xl/Cadence/COMP22111/fpga/memory_stump/functional/verilog.v" Line 654: Result of 9-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "/./home/f93937xl/Cadence/COMP22111/fpga/memory_stump/functional/verilog.v" Line 655: Result of 6-bit expression is truncated to fit in 5-bit target.
+WARNING:HDLCompiler:413 - "/./home/f93937xl/Cadence/COMP22111/fpga/memory_stump/functional/verilog.v" Line 665: Result of 14-bit expression is truncated to fit in 13-bit target.
+WARNING:HDLCompiler:413 - "/./home/f93937xl/Cadence/COMP22111/fpga/memory_stump/functional/verilog.v" Line 722: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "/./home/f93937xl/Cadence/COMP22111/fpga/memory_stump/functional/verilog.v" Line 726: Result of 22-bit expression is truncated to fit in 21-bit target.
+WARNING:HDLCompiler:413 - "/./home/f93937xl/Cadence/COMP22111/fpga/memory_stump/functional/verilog.v" Line 747: Result of 17-bit expression is truncated to fit in 16-bit target.
+WARNING:HDLCompiler:413 - "/./home/f93937xl/Cadence/COMP22111/fpga/memory_stump/functional/verilog.v" Line 751: Result of 17-bit expression is truncated to fit in 16-bit target.
+WARNING:HDLCompiler:413 - "/./home/f93937xl/Cadence/COMP22111/fpga/memory_stump/functional/verilog.v" Line 791: Result of 17-bit expression is truncated to fit in 16-bit target.
+WARNING:HDLCompiler:413 - "/./home/f93937xl/Cadence/COMP22111/fpga/memory_stump/functional/verilog.v" Line 795: Result of 4-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:413 - "/./home/f93937xl/Cadence/COMP22111/fpga/memory_stump/functional/verilog.v" Line 811: Result of 4-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:413 - "/./home/f93937xl/Cadence/COMP22111/fpga/memory_stump/functional/verilog.v" Line 914: Result of 6-bit expression is truncated to fit in 5-bit target.
+WARNING:HDLCompiler:413 - "/./home/f93937xl/Cadence/COMP22111/fpga/memory_stump/functional/verilog.v" Line 930: Result of 6-bit expression is truncated to fit in 5-bit target.
+WARNING:HDLCompiler:413 - "/./home/f93937xl/Cadence/COMP22111/fpga/memory_stump/functional/verilog.v" Line 932: Result of 6-bit expression is truncated to fit in 5-bit target.
+WARNING:HDLCompiler:413 - "/./home/f93937xl/Cadence/COMP22111/fpga/memory_stump/functional/verilog.v" Line 933: Result of 6-bit expression is truncated to fit in 5-bit target.
+WARNING:HDLCompiler:413 - "/./home/f93937xl/Cadence/COMP22111/fpga/memory_stump/functional/verilog.v" Line 934: Result of 6-bit expression is truncated to fit in 5-bit target.
+WARNING:HDLCompiler:413 - "/./home/f93937xl/Cadence/COMP22111/fpga/memory_stump/functional/verilog.v" Line 935: Result of 6-bit expression is truncated to fit in 5-bit target.
+WARNING:HDLCompiler:413 - "/./home/f93937xl/Cadence/COMP22111/fpga/memory_stump/functional/verilog.v" Line 936: Result of 6-bit expression is truncated to fit in 5-bit target.
+WARNING:HDLCompiler:413 - "/./home/f93937xl/Cadence/COMP22111/fpga/memory_stump/functional/verilog.v" Line 937: Result of 6-bit expression is truncated to fit in 5-bit target.
+WARNING:HDLCompiler:413 - "/./home/f93937xl/Cadence/COMP22111/fpga/memory_stump/functional/verilog.v" Line 949: Result of 6-bit expression is truncated to fit in 5-bit target.
+WARNING:HDLCompiler:413 - "/./home/f93937xl/Cadence/COMP22111/fpga/memory_stump/functional/verilog.v" Line 970: Result of 6-bit expression is truncated to fit in 5-bit target.
+WARNING:HDLCompiler:413 - "/./home/f93937xl/Cadence/COMP22111/fpga/memory_stump/functional/verilog.v" Line 986: Result of 6-bit expression is truncated to fit in 5-bit target.
+WARNING:HDLCompiler:413 - "/./home/f93937xl/Cadence/COMP22111/fpga/memory_stump/functional/verilog.v" Line 1000: Result of 6-bit expression is truncated to fit in 5-bit target.
+WARNING:HDLCompiler:413 - "/./home/f93937xl/Cadence/COMP22111/fpga/memory_stump/functional/verilog.v" Line 1216: Result of 9-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "/./home/f93937xl/Cadence/COMP22111/fpga/memory_stump/functional/verilog.v" Line 1361: Result of 9-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:634 - "/./home/f93937xl/Cadence/COMP22111/fpga/memory_stump/functional/verilog.v" Line 246: Net <WEnCPU_bp_data> does not have a driver.
+
+Elaborating module <ackie(CPU_TYPE=8'b011,CPU_SUB=16'b0,FEATURE_COUNT=8'b0,MEM_SEGS=8'b01,MEM_START=32'b0,MEM_SIZE=32'b01100,MEM_ADDR_WIDTH=8'b01111,MEM_DATA_WIDTH=8'b01111,PROC_DAT_WIDTH=8'b01111,PROC_FLAG_ADDR=4'b1000)>.
+WARNING:HDLCompiler:872 - "/./home/f93937xl/Cadence/COMP22111/fpga/ackie/functional/verilog.v" Line 136: Using initial value of cpu_system since it is never assigned
+WARNING:HDLCompiler:413 - "/./home/f93937xl/Cadence/COMP22111/fpga/ackie/functional/verilog.v" Line 246: Result of 120-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "/./home/f93937xl/Cadence/COMP22111/fpga/ackie/functional/verilog.v" Line 262: Result of 32-bit expression is truncated to fit in 19-bit target.
+WARNING:HDLCompiler:413 - "/./home/f93937xl/Cadence/COMP22111/fpga/ackie/functional/verilog.v" Line 276: Result of 9-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "/./home/f93937xl/Cadence/COMP22111/fpga/ackie/functional/verilog.v" Line 291: Result of 32-bit expression is truncated to fit in 19-bit target.
+WARNING:HDLCompiler:413 - "/./home/f93937xl/Cadence/COMP22111/fpga/ackie/functional/verilog.v" Line 323: Result of 16-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "/./home/f93937xl/Cadence/COMP22111/fpga/ackie/functional/verilog.v" Line 325: Result of 16-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "/./home/f93937xl/Cadence/COMP22111/fpga/ackie/functional/verilog.v" Line 342: Result of 20-bit expression is truncated to fit in 19-bit target.
+WARNING:HDLCompiler:413 - "/./home/f93937xl/Cadence/COMP22111/fpga/ackie/functional/verilog.v" Line 348: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "/./home/f93937xl/Cadence/COMP22111/fpga/ackie/functional/verilog.v" Line 375: Result of 20-bit expression is truncated to fit in 19-bit target.
+WARNING:HDLCompiler:413 - "/./home/f93937xl/Cadence/COMP22111/fpga/ackie/functional/verilog.v" Line 380: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "/./home/f93937xl/Cadence/COMP22111/fpga/ackie/functional/verilog.v" Line 420: Result of 32-bit expression is truncated to fit in 19-bit target.
+WARNING:HDLCompiler:413 - "/./home/f93937xl/Cadence/COMP22111/fpga/ackie/functional/verilog.v" Line 451: Result of 32-bit expression is truncated to fit in 19-bit target.
+WARNING:HDLCompiler:413 - "/./home/f93937xl/Cadence/COMP22111/fpga/ackie/functional/verilog.v" Line 494: Result of 32-bit expression is truncated to fit in 19-bit target.
+WARNING:HDLCompiler:413 - "/./home/f93937xl/Cadence/COMP22111/fpga/ackie/functional/verilog.v" Line 559: Result of 6-bit expression is truncated to fit in 5-bit target.
+WARNING:HDLCompiler:413 - "/./home/f93937xl/Cadence/COMP22111/fpga/ackie/functional/verilog.v" Line 564: Result of 6-bit expression is truncated to fit in 5-bit target.
+WARNING:HDLCompiler:1127 - "/./home/f93937xl/Cadence/COMP22111/fpga/stump_fpga_top/functional/verilog.v" Line 200: Assignment to gnd_1 ignored, since the identifier is never used
+
+Elaborating module <emulated_uart>.
+WARNING:HDLCompiler:413 - "/./home/f93937xl/Cadence/COMP22111/fpga/emulated_uart/functional/verilog.v" Line 49: Result of 8-bit expression is truncated to fit in 2-bit target.
+
+Elaborating module <GND>.
+WARNING:HDLCompiler:1127 - "/./home/f93937xl/Cadence/COMP22111/fpga/stump_fpga_top/functional/verilog.v" Line 232: Assignment to gnd_0 ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/./home/f93937xl/Cadence/COMP22111/fpga/stump_fpga_top/functional/verilog.v" Line 234: Assignment to gnd_1 ignored, since the identifier is never used
+
+Elaborating module <IBUF>.
+
+Elaborating module <OBUF>.
+
+Elaborating module <IOBUF>.
+
+Elaborating module <INV>.
+
+Elaborating module <OBUFT>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <stump_fpga_top>.
+    Related source file is "/home/f93937xl/Cadence/COMP22111/fpga/stump_fpga_top/functional/verilog.v".
+INFO:Xst:3210 - "/home/f93937xl/Cadence/COMP22111/fpga/stump_fpga_top/functional/verilog.v" line 135: Output port <mem_ren> of the instance <cpu> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/f93937xl/Cadence/COMP22111/fpga/stump_fpga_top/functional/verilog.v" line 186: Output port <proc_wen> of the instance <ackie_interface> is unconnected or connected to loadless signal.
+    Summary:
+	no macro.
+Unit <stump_fpga_top> synthesized.
+
+Synthesizing Unit <Stump>.
+    Related source file is "/home/f93937xl/Cadence/COMP22111/Stump/Stump/functional/verilog.v".
+    Summary:
+	no macro.
+Unit <Stump> synthesized.
+
+Synthesizing Unit <Stump_datapath>.
+    Related source file is "/home/f93937xl/Cadence/COMP22111/Stump/Stump_datapath/functional/verilog.v".
+    Found 4-bit register for signal <cc>.
+    Found 16-bit register for signal <addr_reg>.
+    Found 16-bit register for signal <ir>.
+    Summary:
+	inferred  36 D-type flip-flop(s).
+	inferred   5 Multiplexer(s).
+Unit <Stump_datapath> synthesized.
+
+Synthesizing Unit <Stump_registers>.
+    Related source file is "/home/f93937xl/Cadence/COMP22111/Stump/Stump_registers/functional/verilog.v".
+    Found 128-bit register for signal <n0032[127:0]>.
+    Found 16-bit 8-to-1 multiplexer for signal <read_addr_A[2]_r[7][15]_wide_mux_2_OUT> created at line 34.
+    Found 16-bit 8-to-1 multiplexer for signal <read_addr_B[2]_r[7][15]_wide_mux_5_OUT> created at line 35.
+    Found 16-bit 8-to-1 multiplexer for signal <read_addr_C[2]_r[7][15]_wide_mux_8_OUT> created at line 36.
+    Summary:
+	inferred 128 D-type flip-flop(s).
+	inferred  15 Multiplexer(s).
+Unit <Stump_registers> synthesized.
+
+Synthesizing Unit <Stump_shifter>.
+    Related source file is "/home/f93937xl/Cadence/COMP22111/Stump/Stump_shifter/functional/verilog.v".
+    Summary:
+	no macro.
+Unit <Stump_shifter> synthesized.
+
+Synthesizing Unit <Stump_ALU>.
+    Related source file is "/home/f93937xl/Cadence/COMP22111/Stump/Stump_ALU/functional/verilog.v".
+    Found 32-bit 4-to-1 multiplexer for signal <_n0168> created at line 43.
+    Summary:
+	inferred   5 Multiplexer(s).
+Unit <Stump_ALU> synthesized.
+
+Synthesizing Unit <Stump_control>.
+    Related source file is "/home/f93937xl/Cadence/COMP22111/Stump/Stump_control/functional/verilog.v".
+    Summary:
+	no macro.
+Unit <Stump_control> synthesized.
+
+Synthesizing Unit <Stump_FSM>.
+    Related source file is "/home/f93937xl/Cadence/COMP22111/Stump/Stump_FSM/functional/verilog.v".
+WARNING:Xst:647 - Input <ir<12:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 2-bit register for signal <state>.
+    Found finite state machine <FSM_0> for signal <state>.
+    -----------------------------------------------------------------------
+    | States             | 3                                              |
+    | Transitions        | 4                                              |
+    | Inputs             | 1                                              |
+    | Outputs            | 2                                              |
+    | Clock              | clk (rising_edge)                              |
+    | Reset              | rst (positive)                                 |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | 00                                             |
+    | Encoding           | user                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Summary:
+	inferred   1 Finite State Machine(s).
+Unit <Stump_FSM> synthesized.
+
+Synthesizing Unit <Stump_control_decode>.
+    Related source file is "/home/f93937xl/Cadence/COMP22111/Stump/Stump_control_decode/functional/verilog.v".
+    Found 4x1-bit Read Only RAM for signal <fetch>
+    Found 1-bit 16-to-1 multiplexer for signal <ir[11]_cc[1]_Mux_6_o> created at line 201.
+    Found 1-bit 3-to-1 multiplexer for signal <reg_write> created at line 48.
+    Found 3-bit 3-to-1 multiplexer for signal <dest> created at line 48.
+    Found 3-bit 3-to-1 multiplexer for signal <srcA> created at line 48.
+    Found 1-bit 3-to-1 multiplexer for signal <mem_ren> created at line 48.
+    Found 1-bit 3-to-1 multiplexer for signal <mem_wen> created at line 48.
+WARNING:Xst:737 - Found 1-bit latch for signal <ext_op>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Summary:
+	inferred   1 RAM(s).
+	inferred   1 Latch(s).
+	inferred  23 Multiplexer(s).
+Unit <Stump_control_decode> synthesized.
+
+Synthesizing Unit <memory_stump>.
+    Related source file is "/home/f93937xl/Cadence/COMP22111/fpga/memory_stump/functional/verilog.v".
+WARNING:Xst:647 - Input <scl> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:2935 - Signal 'lcd_rw', unconnected in block 'memory_stump', is tied to its initial value (0).
+WARNING:Xst:653 - Signal <WEnCPU_bp_data> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+    Found 8192x16-bit dual-port RAM <Mram_mem> for signal <mem>.
+    Found 256x16-bit dual-port RAM <Mram_io> for signal <io>.
+    Found 8192x1-bit dual-port RAM <Mram_bp_mem_ram> for signal <bp_mem_ram>.
+    Found 256x1-bit dual-port RAM <Mram_bp_io_ram> for signal <bp_io_ram>.
+    Found 16-bit register for signal <mem_read_data_ackie>.
+    Found 16-bit register for signal <mem_read_data_io_cpu>.
+    Found 16-bit register for signal <mem_read_data_io_ackie>.
+    Found 1-bit register for signal <bp_mem_read_data_ackie>.
+    Found 1-bit register for signal <bp_mem_read_data_cpu>.
+    Found 1-bit register for signal <bp_mem_read_data_io_ackie>.
+    Found 1-bit register for signal <bp_mem_read_data_io_cpu>.
+    Found 4-bit register for signal <s6_leds>.
+    Found 1-bit register for signal <shaker>.
+    Found 8-bit register for signal <sw_led>.
+    Found 8-bit register for signal <RTCBufferSeconds>.
+    Found 8-bit register for signal <RTCBufferMinutes>.
+    Found 8-bit register for signal <RTCBufferHours>.
+    Found 8-bit register for signal <RTCBufferDay>.
+    Found 8-bit register for signal <RTCBufferDate>.
+    Found 8-bit register for signal <RTCBufferMonth>.
+    Found 8-bit register for signal <RTCBufferYear>.
+    Found 1-bit register for signal <RTCRead>.
+    Found 1-bit register for signal <ADCReadEn>.
+    Found 12-bit register for signal <DACBufferData>.
+    Found 8-bit register for signal <pixel1>.
+    Found 8-bit register for signal <pixel2>.
+    Found 8-bit register for signal <pixel3>.
+    Found 8-bit register for signal <pixel4>.
+    Found 8-bit register for signal <pixel5>.
+    Found 8-bit register for signal <pixel6>.
+    Found 8-bit register for signal <pixel7>.
+    Found 8-bit register for signal <pixel8>.
+    Found 9-bit register for signal <count>.
+    Found 8-bit register for signal <rgb_row>.
+    Found 5-bit register for signal <rgb_count>.
+    Found 3-bit register for signal <rgb_row_count>.
+    Found 8-bit register for signal <lcd_char>.
+    Found 13-bit register for signal <lcd_delay>.
+    Found 8-bit register for signal <lcd_count>.
+    Found 1-bit register for signal <lcd_rs>.
+    Found 5-bit register for signal <lcd_state>.
+    Found 1-bit register for signal <lcd_e>.
+    Found 8-bit register for signal <lcd_data>.
+    Found 16-bit register for signal <buzzer>.
+    Found 1-bit register for signal <buzzer_run>.
+    Found 1-bit register for signal <buzzer_busy>.
+    Found 21-bit register for signal <buzzer_clk_count>.
+    Found 4-bit register for signal <buzzer_time_step_count>.
+    Found 1-bit register for signal <buzzer_pulses>.
+    Found 16-bit register for signal <buzzer_note_count>.
+    Found 16-bit register for signal <free_run_counter>.
+    Found 3-bit register for signal <free_run_counter_delay>.
+    Found 4-bit register for signal <key_row>.
+    Found 3-bit register for signal <keyrow_scan_delay>.
+    Found 1-bit register for signal <keypad<11>>.
+    Found 1-bit register for signal <keypad<10>>.
+    Found 1-bit register for signal <keypad<9>>.
+    Found 1-bit register for signal <keypad<8>>.
+    Found 1-bit register for signal <keypad<7>>.
+    Found 1-bit register for signal <keypad<6>>.
+    Found 1-bit register for signal <keypad<5>>.
+    Found 1-bit register for signal <keypad<4>>.
+    Found 1-bit register for signal <keypad<3>>.
+    Found 1-bit register for signal <keypad<2>>.
+    Found 1-bit register for signal <keypad<1>>.
+    Found 1-bit register for signal <keypad<0>>.
+    Found 1-bit register for signal <sw_keys<7>>.
+    Found 1-bit register for signal <sw_keys<6>>.
+    Found 1-bit register for signal <sw_keys<5>>.
+    Found 1-bit register for signal <sw_keys<4>>.
+    Found 1-bit register for signal <sw_keys<3>>.
+    Found 1-bit register for signal <sw_keys<2>>.
+    Found 1-bit register for signal <sw_keys<1>>.
+    Found 1-bit register for signal <sw_keys<0>>.
+    Found 7-bit register for signal <RTCWEn>.
+    Found 1-bit register for signal <RTCBusy>.
+    Found 1-bit register for signal <DACWEn>.
+    Found 1-bit register for signal <DACBusy>.
+    Found 1-bit register for signal <ADCBusy>.
+    Found 1-bit register for signal <rtc_in_read_en>.
+    Found 1-bit register for signal <i2c_sda>.
+    Found 1-bit register for signal <i2c_scl>.
+    Found 5-bit register for signal <dac_count>.
+    Found 2-bit register for signal <i2c_state>.
+    Found 5-bit register for signal <adc_count>.
+    Found 3-bit register for signal <rtc_out_reg>.
+    Found 8-bit register for signal <rtc_out_value>.
+    Found 5-bit register for signal <rtc_out_count>.
+    Found 5-bit register for signal <rtc_in_count>.
+    Found 1-bit register for signal <rtc_out_sda>.
+    Found 8-bit register for signal <rtc_out_byte>.
+    Found 1-bit register for signal <rtc_out_scl>.
+    Found 1-bit register for signal <rtc_out_ack>.
+    Found 3-bit register for signal <rtc_out_state>.
+    Found 7-bit register for signal <RTCAck>.
+    Found 8-bit register for signal <rtc_out_bit_count>.
+    Found 1-bit register for signal <rtc_in_sda>.
+    Found 8-bit register for signal <rtc_in_byte>.
+    Found 1-bit register for signal <rtc_in_scl>.
+    Found 1-bit register for signal <rtc_in_ack>.
+    Found 4-bit register for signal <rtc_in_state>.
+    Found 8-bit register for signal <rtc_in_bit_count>.
+    Found 8-bit register for signal <RTCYear>.
+    Found 1-bit register for signal <RTCAckRead>.
+    Found 8-bit register for signal <RTCMonth>.
+    Found 3-bit register for signal <rtc_in_byte_count>.
+    Found 8-bit register for signal <RTCDate>.
+    Found 8-bit register for signal <RTCDay>.
+    Found 8-bit register for signal <RTCHours>.
+    Found 8-bit register for signal <RTCMinutes>.
+    Found 8-bit register for signal <RTCSeconds>.
+    Found 1-bit register for signal <adc_sda>.
+    Found 8-bit register for signal <adc_byte>.
+    Found 1-bit register for signal <adc_scl>.
+    Found 1-bit register for signal <adc_ack>.
+    Found 3-bit register for signal <adc_state>.
+    Found 8-bit register for signal <adc_bit_count>.
+    Found 16-bit register for signal <ADCData>.
+    Found 1-bit register for signal <adc_byte_count>.
+    Found 1-bit register for signal <ADCAck>.
+    Found 1-bit register for signal <dac_sda>.
+    Found 8-bit register for signal <dac_byte>.
+    Found 1-bit register for signal <dac_scl>.
+    Found 1-bit register for signal <dac_ack>.
+    Found 3-bit register for signal <dac_state>.
+    Found 12-bit register for signal <DACData>.
+    Found 1-bit register for signal <DACFlag>.
+    Found 8-bit register for signal <dac_bit_count>.
+    Found 16-bit register for signal <mem_read_data_cpu>.
+    Found finite state machine <FSM_1> for signal <i2c_state>.
+    -----------------------------------------------------------------------
+    | States             | 4                                              |
+    | Transitions        | 25                                             |
+    | Inputs             | 21                                             |
+    | Outputs            | 2                                              |
+    | Clock              | Clk (rising_edge)                              |
+    | Power Up State     | 00                                             |
+    | Encoding           | user                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found finite state machine <FSM_2> for signal <rtc_out_state>.
+    -----------------------------------------------------------------------
+    | States             | 8                                              |
+    | Transitions        | 45                                             |
+    | Inputs             | 6                                              |
+    | Outputs            | 5                                              |
+    | Clock              | Clk (rising_edge)                              |
+    | Power Up State     | 000                                            |
+    | Encoding           | user                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found finite state machine <FSM_4> for signal <rtc_in_byte_count>.
+    -----------------------------------------------------------------------
+    | States             | 7                                              |
+    | Transitions        | 80                                             |
+    | Inputs             | 10                                             |
+    | Outputs            | 3                                              |
+    | Clock              | Clk (rising_edge)                              |
+    | Power Up State     | 000                                            |
+    | Encoding           | user                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found finite state machine <FSM_5> for signal <adc_state>.
+    -----------------------------------------------------------------------
+    | States             | 7                                              |
+    | Transitions        | 39                                             |
+    | Inputs             | 7                                              |
+    | Outputs            | 7                                              |
+    | Clock              | Clk (rising_edge)                              |
+    | Power Up State     | 000                                            |
+    | Encoding           | user                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found finite state machine <FSM_6> for signal <dac_state>.
+    -----------------------------------------------------------------------
+    | States             | 8                                              |
+    | Transitions        | 45                                             |
+    | Inputs             | 6                                              |
+    | Outputs            | 5                                              |
+    | Clock              | Clk (rising_edge)                              |
+    | Power Up State     | 000                                            |
+    | Encoding           | user                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found finite state machine <FSM_3> for signal <rtc_in_state>.
+    -----------------------------------------------------------------------
+    | States             | 12                                             |
+    | Transitions        | 70                                             |
+    | Inputs             | 9                                              |
+    | Outputs            | 18                                             |
+    | Clock              | Clk (rising_edge)                              |
+    | Power Up State     | 0000                                           |
+    | Encoding           | user                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 3-bit adder for signal <rgb_row_count[2]_GND_17_o_add_267_OUT> created at line 596.
+    Found 5-bit adder for signal <rgb_count[4]_GND_17_o_add_269_OUT> created at line 600.
+    Found 9-bit adder for signal <count[8]_GND_17_o_add_273_OUT> created at line 605.
+    Found 8-bit adder for signal <lcd_count[7]_GND_17_o_add_311_OUT> created at line 654.
+    Found 5-bit adder for signal <lcd_state[4]_GND_17_o_add_315_OUT> created at line 655.
+    Found 13-bit adder for signal <lcd_delay[12]_GND_17_o_add_324_OUT> created at line 665.
+    Found 4-bit adder for signal <buzzer_time_step_count[3]_GND_17_o_add_345_OUT> created at line 722.
+    Found 21-bit adder for signal <buzzer_clk_count[20]_GND_17_o_add_346_OUT> created at line 726.
+    Found 16-bit adder for signal <buzzer_note_count[15]_GND_17_o_add_364_OUT> created at line 751.
+    Found 16-bit adder for signal <free_run_counter[15]_GND_17_o_add_375_OUT> created at line 791.
+    Found 3-bit adder for signal <free_run_counter_delay[2]_GND_17_o_add_376_OUT> created at line 795.
+    Found 3-bit adder for signal <keyrow_scan_delay[2]_GND_17_o_add_383_OUT> created at line 811.
+    Found 5-bit adder for signal <rtc_in_count[4]_GND_17_o_add_427_OUT> created at line 914.
+    Found 5-bit adder for signal <rtc_out_count[4]_GND_17_o_add_474_OUT> created at line 949.
+    Found 5-bit adder for signal <adc_count[4]_GND_17_o_add_485_OUT> created at line 970.
+    Found 5-bit adder for signal <dac_count[4]_GND_17_o_add_498_OUT> created at line 1000.
+    Found 16x16-bit Read Only RAM for signal <buzzer_note>
+    Found 32x4-bit Read Only RAM for signal <_n5091>
+    Found 1-bit 4-to-1 multiplexer for signal <i2c_state[1]_dac_sda_Mux_503_o> created at line 894.
+    Found 1-bit 4-to-1 multiplexer for signal <i2c_state[1]_dac_scl_Mux_504_o> created at line 894.
+    Found 1-bit 3-to-1 multiplexer for signal <i2c_state[1]_RTCBusy_Mux_515_o> created at line 894.
+    Found 16-bit comparator not equal for signal <n0165> created at line 511
+    Found 4-bit comparator equal for signal <buzzer_time_step_count[3]_buzzer[11]_equal_344_o> created at line 713
+    Found 16-bit comparator equal for signal <buzzer_note_count[15]_buzzer_octave_and_note[15]_equal_362_o> created at line 739
+    Found 16-bit comparator equal for signal <buzzer_note_count[15]_GND_17_o_equal_363_o> created at line 744
+    Summary:
+	inferred   6 RAM(s).
+	inferred  16 Adder/Subtractor(s).
+	inferred 606 D-type flip-flop(s).
+	inferred   4 Comparator(s).
+	inferred 219 Multiplexer(s).
+	inferred   6 Finite State Machine(s).
+Unit <memory_stump> synthesized.
+
+Synthesizing Unit <ackie>.
+    Related source file is "/home/f93937xl/Cadence/COMP22111/fpga/ackie/functional/verilog.v".
+        CPU_TYPE = 8'b00000011
+        CPU_SUB = 16'b0000000000000000
+        FEATURE_COUNT = 8'b00000000
+        MEM_SEGS = 8'b00000001
+        MEM_START = 32'b00000000000000000000000000000000
+        MEM_SIZE = 32'b00000000000000000000000000001100
+        MEM_ADDR_WIDTH = 8'b00001111
+        MEM_DATA_WIDTH = 8'b00001111
+        PROC_DAT_WIDTH = 8'b00001111
+        PROC_FLAG_ADDR = 4'b1000
+    Found 8-bit register for signal <state>.
+    Found 8-bit register for signal <cmd>.
+    Found 19-bit register for signal <put_counter>.
+    Found 120-bit register for signal <return_message>.
+    Found 19-bit register for signal <get_counter>.
+    Found 4-bit register for signal <element_size>.
+    Found 8-bit register for signal <byte_out>.
+    Found 1-bit register for signal <put>.
+    Found 32-bit register for signal <address>.
+    Found 16-bit register for signal <num_elements>.
+    Found 4-bit register for signal <data_byte_sel>.
+    Found 16-bit register for signal <mem_dout>.
+    Found 1-bit register for signal <mem_wen>.
+    Found 1-bit register for signal <proc_wen>.
+    Found 32-bit register for signal <steps_to_execute>.
+    Found 1-bit register for signal <execute_cpu>.
+    Found 16-bit register for signal <breakpoint_adr>.
+    Found 1-bit register for signal <bp_mem_data_write>.
+    Found 1-bit register for signal <bp_mem_write_en>.
+    Found 8-bit register for signal <cpu_status>.
+    Found 32-bit register for signal <steps_remain>.
+    Found 32-bit register for signal <steps_since_reset>.
+    Found 5-bit register for signal <proc_clk_delay>.
+    Found 1-bit register for signal <proc_clk>.
+    Found 1-bit register for signal <cpu_reset>.
+    Found 1-bit register for signal <cpu_stop>.
+    Found 1-bit register for signal <cpu_pause>.
+    Found 1-bit register for signal <get>.
+    Found finite state machine <FSM_7> for signal <cpu_status>.
+    -----------------------------------------------------------------------
+    | States             | 3                                              |
+    | Transitions        | 28                                             |
+    | Inputs             | 13                                             |
+    | Outputs            | 2                                              |
+    | Clock              | clk (rising_edge)                              |
+    | Reset              | cmd[7]_GND_18_o_equal_221_o (positive)         |
+    | Reset type         | synchronous                                    |
+    | Reset State        | 10000000                                       |
+    | Power Up State     | 00000000                                       |
+    | Encoding           | user                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 32-bit subtractor for signal <steps_remain[31]_GND_18_o_sub_240_OUT> created at line 572.
+    Found 8-bit adder for signal <state[7]_GND_18_o_add_42_OUT> created at line 276.
+    Found 19-bit adder for signal <put_counter[18]_GND_18_o_add_81_OUT> created at line 342.
+    Found 32-bit adder for signal <address[31]_GND_18_o_add_82_OUT> created at line 343.
+    Found 5-bit adder for signal <_n0543> created at line 368.
+    Found 19-bit adder for signal <get_counter[18]_GND_18_o_add_103_OUT> created at line 375.
+    Found 5-bit adder for signal <proc_clk_delay[4]_GND_18_o_add_232_OUT> created at line 564.
+    Found 32-bit adder for signal <steps_since_reset[31]_GND_18_o_add_237_OUT> created at line 570.
+    Found 19-bit subtractor for signal <GND_18_o_GND_18_o_sub_36_OUT<18:0>> created at line 262.
+    Found 19-bit subtractor for signal <GND_18_o_GND_18_o_sub_47_OUT<18:0>> created at line 291.
+    Found 4-bit shifter logical left for signal <GND_18_o_cmd[2]_shift_left_7_OUT> created at line 223
+    Found 120-bit shifter logical right for signal <n0343> created at line 246
+    Found 8-bit shifter logical right for signal <GND_18_o_data_byte_sel[3]_shift_right_66_OUT> created at line 321
+    Found 16-bit shifter logical right for signal <n0368> created at line 323
+    Found 16-bit shifter logical right for signal <n0370> created at line 325
+    Found 19-bit comparator equal for signal <put_counter[18]_GND_18_o_equal_77_o> created at line 335
+    Found 19-bit comparator equal for signal <get_counter[18]_GND_18_o_equal_113_o> created at line 390
+    Found 5-bit comparator greater for signal <GND_18_o_proc_clk_delay[4]_LessThan_231_o> created at line 557
+    Found 5-bit comparator equal for signal <GND_18_o_GND_18_o_equal_101_o> created at line 368
+    Summary:
+	inferred   9 Adder/Subtractor(s).
+	inferred 390 D-type flip-flop(s).
+	inferred   4 Comparator(s).
+	inferred  70 Multiplexer(s).
+	inferred   5 Combinational logic shifter(s).
+	inferred   1 Finite State Machine(s).
+Unit <ackie> synthesized.
+
+Synthesizing Unit <emulated_uart>.
+    Related source file is "/home/f93937xl/Cadence/COMP22111/fpga/emulated_uart/functional/verilog.v".
+    Found 2-bit register for signal <addr>.
+    Found 8-bit register for signal <byte_out>.
+    Found 1-bit register for signal <rtr>.
+    Found 8-bit register for signal <epp_dout>.
+    Found 1-bit register for signal <rts>.
+    Found 1-bit register for signal <get_ack>.
+    Found 8-bit register for signal <byte2pc>.
+    Found 1-bit register for signal <put_ack>.
+    Found 1-bit register for signal <epp_wait>.
+    Summary:
+	inferred  31 D-type flip-flop(s).
+	inferred   2 Multiplexer(s).
+Unit <emulated_uart> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 7
+ 16x16-bit single-port Read Only RAM                   : 1
+ 256x1-bit dual-port RAM                               : 1
+ 256x16-bit dual-port RAM                              : 1
+ 32x4-bit single-port Read Only RAM                    : 1
+ 4x1-bit single-port Read Only RAM                     : 1
+ 8192x1-bit dual-port RAM                              : 1
+ 8192x16-bit dual-port RAM                             : 1
+# Adders/Subtractors                                   : 25
+ 13-bit adder                                          : 1
+ 16-bit adder                                          : 2
+ 19-bit addsub                                         : 2
+ 19-bit subtractor                                     : 1
+ 21-bit adder                                          : 1
+ 3-bit adder                                           : 3
+ 32-bit adder                                          : 2
+ 32-bit subtractor                                     : 1
+ 4-bit adder                                           : 1
+ 5-bit adder                                           : 8
+ 8-bit adder                                           : 2
+ 9-bit adder                                           : 1
+# Registers                                            : 142
+ 1-bit register                                        : 51
+ 12-bit register                                       : 3
+ 120-bit register                                      : 1
+ 128-bit register                                      : 1
+ 13-bit register                                       : 1
+ 16-bit register                                       : 13
+ 19-bit register                                       : 2
+ 2-bit register                                        : 1
+ 21-bit register                                       : 1
+ 3-bit register                                        : 4
+ 32-bit register                                       : 4
+ 4-bit register                                        : 6
+ 5-bit register                                        : 7
+ 7-bit register                                        : 2
+ 8-bit register                                        : 44
+ 9-bit register                                        : 1
+# Latches                                              : 1
+ 1-bit latch                                           : 1
+# Comparators                                          : 8
+ 16-bit comparator equal                               : 2
+ 16-bit comparator not equal                           : 1
+ 19-bit comparator equal                               : 2
+ 4-bit comparator equal                                : 1
+ 5-bit comparator equal                                : 1
+ 5-bit comparator greater                              : 1
+# Multiplexers                                         : 339
+ 1-bit 16-to-1 multiplexer                             : 1
+ 1-bit 2-to-1 multiplexer                              : 112
+ 1-bit 3-to-1 multiplexer                              : 4
+ 1-bit 4-to-1 multiplexer                              : 2
+ 12-bit 2-to-1 multiplexer                             : 3
+ 120-bit 2-to-1 multiplexer                            : 1
+ 128-bit 2-to-1 multiplexer                            : 1
+ 16-bit 2-to-1 multiplexer                             : 31
+ 16-bit 8-to-1 multiplexer                             : 3
+ 19-bit 2-to-1 multiplexer                             : 10
+ 2-bit 2-to-1 multiplexer                              : 2
+ 21-bit 2-to-1 multiplexer                             : 1
+ 3-bit 2-to-1 multiplexer                              : 9
+ 3-bit 3-to-1 multiplexer                              : 2
+ 32-bit 2-to-1 multiplexer                             : 15
+ 32-bit 4-to-1 multiplexer                             : 1
+ 4-bit 2-to-1 multiplexer                              : 6
+ 5-bit 2-to-1 multiplexer                              : 6
+ 7-bit 2-to-1 multiplexer                              : 7
+ 8-bit 2-to-1 multiplexer                              : 122
+# Logic shifters                                       : 5
+ 120-bit shifter logical right                         : 1
+ 16-bit shifter logical right                          : 2
+ 4-bit shifter logical left                            : 1
+ 8-bit shifter logical right                           : 1
+# FSMs                                                 : 8
+# Xors                                                 : 19
+ 1-bit xor2                                            : 3
+ 1-bit xor3                                            : 16
+
+=========================================================================
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <Stump_control_decode>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_fetch> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 4-word x 1-bit                      |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <state>         |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <fetch>         |          |
+    -----------------------------------------------------------------------
+Unit <Stump_control_decode> synthesized (advanced).
+
+Synthesizing (advanced) Unit <ackie>.
+The following registers are absorbed into counter <address>: 1 register on signal <address>.
+The following registers are absorbed into counter <steps_since_reset>: 1 register on signal <steps_since_reset>.
+Unit <ackie> synthesized (advanced).
+
+Synthesizing (advanced) Unit <memory_stump>.
+The following registers are absorbed into counter <count>: 1 register on signal <count>.
+The following registers are absorbed into counter <lcd_delay>: 1 register on signal <lcd_delay>.
+The following registers are absorbed into counter <keyrow_scan_delay>: 1 register on signal <keyrow_scan_delay>.
+The following registers are absorbed into counter <free_run_counter_delay>: 1 register on signal <free_run_counter_delay>.
+The following registers are absorbed into counter <free_run_counter>: 1 register on signal <free_run_counter>.
+The following registers are absorbed into counter <rgb_row_count>: 1 register on signal <rgb_row_count>.
+The following registers are absorbed into counter <rgb_count>: 1 register on signal <rgb_count>.
+The following registers are absorbed into counter <buzzer_clk_count>: 1 register on signal <buzzer_clk_count>.
+The following registers are absorbed into counter <buzzer_time_step_count>: 1 register on signal <buzzer_time_step_count>.
+The following registers are absorbed into counter <buzzer_note_count>: 1 register on signal <buzzer_note_count>.
+The following registers are absorbed into counter <dac_count>: 1 register on signal <dac_count>.
+The following registers are absorbed into counter <adc_count>: 1 register on signal <adc_count>.
+The following registers are absorbed into counter <rtc_in_count>: 1 register on signal <rtc_in_count>.
+The following registers are absorbed into counter <rtc_out_count>: 1 register on signal <rtc_out_count>.
+INFO:Xst:3226 - The RAM <Mram_io> will be implemented as a BLOCK RAM, absorbing the following register(s): <mem_read_data_io_ackie> <mem_read_data_io_cpu>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 16-bit                   |          |
+    |     mode           | read-first                          |          |
+    |     clkA           | connected to signal <Clk>           | fall     |
+    |     weA            | connected to signal <WEnAckie_io>   | high     |
+    |     addrA          | connected to signal <address_io_ackie> |          |
+    |     diA            | connected to signal <write_data_ackie> |          |
+    |     doA            | connected to signal <mem_read_data_io_ackie> |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 256-word x 16-bit                   |          |
+    |     mode           | read-first                          |          |
+    |     clkB           | connected to signal <Clk>           | fall     |
+    |     weB            | connected to signal <WEnCPU_io>     | high     |
+    |     addrB          | connected to signal <address_cpu<7:0>> |          |
+    |     diB            | connected to signal <write_data_cpu> |          |
+    |     doB            | connected to signal <mem_read_data_io_cpu> |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3231 - The small RAM <Mram_buzzer_note> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 16-bit                    |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <buzzer<3:0>>   |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <buzzer_note>   |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <Mram_mem> will be implemented as a BLOCK RAM, absorbing the following register(s): <mem_read_data_ackie> <mem_read_data_cpu>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 8192-word x 16-bit                  |          |
+    |     mode           | read-first                          |          |
+    |     clkA           | connected to signal <Clk>           | fall     |
+    |     weA            | connected to signal <WEnAckie_mem>  | high     |
+    |     addrA          | connected to signal <address_ackie<12:0>> |          |
+    |     diA            | connected to signal <write_data_ackie> |          |
+    |     doA            | connected to signal <mem_read_data_ackie> |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 8192-word x 16-bit                  |          |
+    |     mode           | read-first                          |          |
+    |     clkB           | connected to signal <Clk>           | fall     |
+    |     weB            | connected to signal <WEnCPU_mem>    | high     |
+    |     addrB          | connected to signal <address_cpu<12:0>> |          |
+    |     diB            | connected to signal <write_data_cpu> |          |
+    |     doB            | connected to signal <mem_read_data_cpu> |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+Unit <memory_stump> synthesized (advanced).
+
+Synthesizing (advanced) Unit <stump_fpga_top>.
+INFO:Xst:3226 - The RAM <memory/Mram_bp_io_ram> will be implemented as a BLOCK RAM, absorbing the following register(s): <memory/bp_mem_read_data_io_cpu> <memory/bp_mem_read_data_io_ackie>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 1-bit                    |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | fall     |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <address_cpu<7:0>> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <memory/bp_mem_read_data_io_cpu> |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 256-word x 1-bit                    |          |
+    |     mode           | read-first                          |          |
+    |     clkB           | connected to signal <clk>           | fall     |
+    |     weB            | connected to signal <memory/WEnAckie_bp_1> | high     |
+    |     addrB          | connected to signal <breakpoint_adr<7:0>> |          |
+    |     diB            | connected to signal <bp_mem_data_write> |          |
+    |     doB            | connected to signal <memory/bp_mem_read_data_io_ackie> |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <memory/Mram_bp_mem_ram> will be implemented as a BLOCK RAM, absorbing the following register(s): <memory/bp_mem_read_data_cpu> <memory/bp_mem_read_data_ackie>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 8192-word x 1-bit                   |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | fall     |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <address_cpu<12:0>> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <memory/bp_mem_read_data_cpu> |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 8192-word x 1-bit                   |          |
+    |     mode           | read-first                          |          |
+    |     clkB           | connected to signal <clk>           | fall     |
+    |     weB            | connected to signal <memory/WEnAckie_bp_0> | high     |
+    |     addrB          | connected to signal <breakpoint_adr<12:0>> |          |
+    |     diB            | connected to signal <bp_mem_data_write> |          |
+    |     doB            | connected to signal <memory/bp_mem_read_data_ackie> |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <memory/Mram__n5091> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 32-word x 4-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <memory/rgb_count> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <red_en>        |          |
+    -----------------------------------------------------------------------
+Unit <stump_fpga_top> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 7
+ 16x16-bit single-port distributed Read Only RAM       : 1
+ 256x1-bit dual-port block RAM                         : 1
+ 256x16-bit dual-port block RAM                        : 1
+ 32x4-bit single-port distributed Read Only RAM        : 1
+ 4x1-bit single-port distributed Read Only RAM         : 1
+ 8192x1-bit dual-port block RAM                        : 1
+ 8192x16-bit dual-port block RAM                       : 1
+# Adders/Subtractors                                   : 9
+ 19-bit addsub                                         : 2
+ 19-bit subtractor                                     : 1
+ 32-bit subtractor                                     : 1
+ 5-bit adder                                           : 3
+ 8-bit adder                                           : 2
+# Counters                                             : 16
+ 13-bit up counter                                     : 1
+ 16-bit up counter                                     : 2
+ 21-bit up counter                                     : 1
+ 3-bit up counter                                      : 3
+ 32-bit up counter                                     : 2
+ 4-bit up counter                                      : 1
+ 5-bit up counter                                      : 5
+ 9-bit up counter                                      : 1
+# Registers                                            : 945
+ Flip-Flops                                            : 945
+# Comparators                                          : 8
+ 16-bit comparator equal                               : 2
+ 16-bit comparator not equal                           : 1
+ 19-bit comparator equal                               : 2
+ 4-bit comparator equal                                : 1
+ 5-bit comparator equal                                : 1
+ 5-bit comparator greater                              : 1
+# Multiplexers                                         : 370
+ 1-bit 16-to-1 multiplexer                             : 1
+ 1-bit 2-to-1 multiplexer                              : 149
+ 1-bit 3-to-1 multiplexer                              : 4
+ 1-bit 4-to-1 multiplexer                              : 2
+ 12-bit 2-to-1 multiplexer                             : 3
+ 120-bit 2-to-1 multiplexer                            : 1
+ 128-bit 2-to-1 multiplexer                            : 1
+ 16-bit 2-to-1 multiplexer                             : 30
+ 16-bit 8-to-1 multiplexer                             : 3
+ 19-bit 2-to-1 multiplexer                             : 10
+ 2-bit 2-to-1 multiplexer                              : 2
+ 3-bit 2-to-1 multiplexer                              : 9
+ 3-bit 3-to-1 multiplexer                              : 2
+ 32-bit 2-to-1 multiplexer                             : 12
+ 32-bit 4-to-1 multiplexer                             : 1
+ 4-bit 2-to-1 multiplexer                              : 6
+ 5-bit 2-to-1 multiplexer                              : 6
+ 7-bit 2-to-1 multiplexer                              : 7
+ 8-bit 2-to-1 multiplexer                              : 121
+# Logic shifters                                       : 5
+ 120-bit shifter logical right                         : 1
+ 16-bit shifter logical right                          : 2
+ 4-bit shifter logical left                            : 1
+ 8-bit shifter logical right                           : 1
+# FSMs                                                 : 8
+# Xors                                                 : 19
+ 1-bit xor2                                            : 3
+ 1-bit xor3                                            : 16
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1710 - FF/Latch <ackie_interface/return_message_91> (without init value) has a constant value of 0 in block <stump_fpga_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <ackie_interface/return_message_92> (without init value) has a constant value of 0 in block <stump_fpga_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <ackie_interface/return_message_93> (without init value) has a constant value of 0 in block <stump_fpga_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <ackie_interface/return_message_94> (without init value) has a constant value of 0 in block <stump_fpga_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <ackie_interface/return_message_95> (without init value) has a constant value of 0 in block <stump_fpga_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <ackie_interface/return_message_98> (without init value) has a constant value of 0 in block <stump_fpga_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <ackie_interface/return_message_99> (without init value) has a constant value of 0 in block <stump_fpga_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <ackie_interface/return_message_100> (without init value) has a constant value of 0 in block <stump_fpga_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <ackie_interface/return_message_101> (without init value) has a constant value of 0 in block <stump_fpga_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <ackie_interface/return_message_102> (without init value) has a constant value of 0 in block <stump_fpga_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <ackie_interface/return_message_103> (without init value) has a constant value of 0 in block <stump_fpga_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <ackie_interface/return_message_104> (without init value) has a constant value of 0 in block <stump_fpga_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <ackie_interface/return_message_105> (without init value) has a constant value of 0 in block <stump_fpga_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <ackie_interface/return_message_106> (without init value) has a constant value of 0 in block <stump_fpga_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <ackie_interface/return_message_107> (without init value) has a constant value of 0 in block <stump_fpga_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <ackie_interface/return_message_108> (without init value) has a constant value of 0 in block <stump_fpga_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <ackie_interface/return_message_109> (without init value) has a constant value of 0 in block <stump_fpga_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <ackie_interface/return_message_110> (without init value) has a constant value of 0 in block <stump_fpga_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <ackie_interface/return_message_111> (without init value) has a constant value of 0 in block <stump_fpga_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <ackie_interface/return_message_113> (without init value) has a constant value of 0 in block <stump_fpga_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <ackie_interface/return_message_116> (without init value) has a constant value of 0 in block <stump_fpga_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <ackie_interface/return_message_117> (without init value) has a constant value of 0 in block <stump_fpga_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <ackie_interface/return_message_118> (without init value) has a constant value of 0 in block <stump_fpga_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <ackie_interface/return_message_119> (without init value) has a constant value of 0 in block <stump_fpga_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <ackie_interface/return_message_65> (without init value) has a constant value of 0 in block <stump_fpga_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <ackie_interface/return_message_66> (without init value) has a constant value of 0 in block <stump_fpga_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <ackie_interface/return_message_67> (without init value) has a constant value of 0 in block <stump_fpga_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <ackie_interface/return_message_68> (without init value) has a constant value of 0 in block <stump_fpga_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <ackie_interface/return_message_69> (without init value) has a constant value of 0 in block <stump_fpga_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <ackie_interface/return_message_72> (without init value) has a constant value of 0 in block <stump_fpga_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <ackie_interface/return_message_73> (without init value) has a constant value of 0 in block <stump_fpga_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <ackie_interface/return_message_74> (without init value) has a constant value of 0 in block <stump_fpga_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <ackie_interface/return_message_75> (without init value) has a constant value of 0 in block <stump_fpga_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <ackie_interface/return_message_76> (without init value) has a constant value of 0 in block <stump_fpga_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <ackie_interface/return_message_77> (without init value) has a constant value of 0 in block <stump_fpga_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <ackie_interface/return_message_78> (without init value) has a constant value of 0 in block <stump_fpga_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <ackie_interface/return_message_79> (without init value) has a constant value of 0 in block <stump_fpga_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <ackie_interface/return_message_80> (without init value) has a constant value of 0 in block <stump_fpga_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <ackie_interface/return_message_81> (without init value) has a constant value of 0 in block <stump_fpga_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <ackie_interface/return_message_82> (without init value) has a constant value of 0 in block <stump_fpga_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <ackie_interface/return_message_83> (without init value) has a constant value of 0 in block <stump_fpga_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <ackie_interface/return_message_84> (without init value) has a constant value of 0 in block <stump_fpga_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <ackie_interface/return_message_85> (without init value) has a constant value of 0 in block <stump_fpga_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <ackie_interface/return_message_86> (without init value) has a constant value of 0 in block <stump_fpga_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <ackie_interface/return_message_87> (without init value) has a constant value of 0 in block <stump_fpga_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <ackie_interface/return_message_88> (without init value) has a constant value of 0 in block <stump_fpga_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <ackie_interface/return_message_89> (without init value) has a constant value of 0 in block <stump_fpga_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <ackie_interface/return_message_90> (without init value) has a constant value of 0 in block <stump_fpga_top>. This FF/Latch will be trimmed during the optimization process.
+Optimizing FSM <FSM_0> on signal <state[1:2]> with user encoding.
+-------------------
+ State | Encoding
+-------------------
+ 00    | 00
+ 01    | 01
+ 10    | 10
+-------------------
+Optimizing FSM <FSM_6> on signal <dac_state[1:3]> with user encoding.
+-------------------
+ State | Encoding
+-------------------
+ 000   | 000
+ 001   | 001
+ 010   | 010
+ 111   | 111
+ 011   | 011
+ 100   | 100
+ 101   | 101
+ 110   | 110
+-------------------
+Optimizing FSM <FSM_5> on signal <adc_state[1:3]> with user encoding.
+-------------------
+ State | Encoding
+-------------------
+ 000   | 000
+ 001   | 001
+ 010   | 010
+ 110   | 110
+ 011   | 011
+ 101   | 101
+ 100   | 100
+-------------------
+Optimizing FSM <FSM_4> on signal <rtc_in_byte_count[1:3]> with user encoding.
+-------------------
+ State | Encoding
+-------------------
+ 000   | 000
+ 001   | 001
+ 010   | 010
+ 011   | 011
+ 100   | 100
+ 101   | 101
+ 110   | 110
+-------------------
+Optimizing FSM <FSM_2> on signal <rtc_out_state[1:3]> with user encoding.
+-------------------
+ State | Encoding
+-------------------
+ 000   | 000
+ 001   | 001
+ 010   | 010
+ 111   | 111
+ 011   | 011
+ 100   | 100
+ 101   | 101
+ 110   | 110
+-------------------
+Optimizing FSM <FSM_3> on signal <rtc_in_state[1:4]> with user encoding.
+-------------------
+ State | Encoding
+-------------------
+ 0000  | 0000
+ 0001  | 0001
+ 0010  | 0010
+ 1011  | 1011
+ 0011  | 0011
+ 0100  | 0100
+ 0101  | 0101
+ 0110  | 0110
+ 0111  | 0111
+ 1000  | 1000
+ 1001  | 1001
+ 1010  | 1010
+-------------------
+Optimizing FSM <FSM_7> on signal <cpu_status[1:8]> with user encoding.
+----------------------
+ State    | Encoding
+----------------------
+ 00000000 | 00000000
+ 10000000 | 10000000
+ 01000000 | 01000000
+----------------------
+Optimizing FSM <FSM_1> on signal <i2c_state[1:2]> with user encoding.
+-------------------
+ State | Encoding
+-------------------
+ 00    | 00
+ 01    | 01
+ 10    | 10
+ 11    | 11
+-------------------
+WARNING:Xst:1293 - FF/Latch <ackie_interface/fsmfake7_0> has a constant value of 0 in block <stump_fpga_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <ackie_interface/fsmfake7_1> has a constant value of 0 in block <stump_fpga_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <ackie_interface/fsmfake7_2> has a constant value of 0 in block <stump_fpga_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <ackie_interface/fsmfake7_3> has a constant value of 0 in block <stump_fpga_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <ackie_interface/fsmfake7_4> has a constant value of 0 in block <stump_fpga_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <ackie_interface/fsmfake7_5> has a constant value of 0 in block <stump_fpga_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <memory/RTCBufferSeconds_7> (without init value) has a constant value of 0 in block <stump_fpga_top>. This FF/Latch will be trimmed during the optimization process.
+
+Optimizing unit <stump_fpga_top> ...
+
+Optimizing unit <emulated_uart> ...
+
+Optimizing unit <Stump_datapath> ...
+
+Optimizing unit <Stump_ALU> ...
+
+Optimizing unit <Stump_registers> ...
+
+Optimizing unit <Stump_control_decode> ...
+WARNING:Xst:1710 - FF/Latch <cpu/datapath/registers/r_7_112> (without init value) has a constant value of 0 in block <stump_fpga_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <cpu/datapath/registers/r_7_113> (without init value) has a constant value of 0 in block <stump_fpga_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <cpu/datapath/registers/r_7_114> (without init value) has a constant value of 0 in block <stump_fpga_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <cpu/datapath/registers/r_7_115> (without init value) has a constant value of 0 in block <stump_fpga_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <cpu/datapath/registers/r_7_116> (without init value) has a constant value of 0 in block <stump_fpga_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <cpu/datapath/registers/r_7_117> (without init value) has a constant value of 0 in block <stump_fpga_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <cpu/datapath/registers/r_7_118> (without init value) has a constant value of 0 in block <stump_fpga_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <cpu/datapath/registers/r_7_119> (without init value) has a constant value of 0 in block <stump_fpga_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <cpu/datapath/registers/r_7_120> (without init value) has a constant value of 0 in block <stump_fpga_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <cpu/datapath/registers/r_7_121> (without init value) has a constant value of 0 in block <stump_fpga_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <cpu/datapath/registers/r_7_122> (without init value) has a constant value of 0 in block <stump_fpga_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <cpu/datapath/registers/r_7_123> (without init value) has a constant value of 0 in block <stump_fpga_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <cpu/datapath/registers/r_7_124> (without init value) has a constant value of 0 in block <stump_fpga_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <cpu/datapath/registers/r_7_125> (without init value) has a constant value of 0 in block <stump_fpga_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <cpu/datapath/registers/r_7_126> (without init value) has a constant value of 0 in block <stump_fpga_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <cpu/datapath/registers/r_7_127> (without init value) has a constant value of 0 in block <stump_fpga_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <ackie_interface/state_7> has a constant value of 0 in block <stump_fpga_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <ackie_interface/state_6> has a constant value of 0 in block <stump_fpga_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <ackie_interface/state_5> has a constant value of 0 in block <stump_fpga_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <ackie_interface/proc_clk_delay_4> has a constant value of 0 in block <stump_fpga_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <ackie_interface/proc_clk_delay_3> has a constant value of 0 in block <stump_fpga_top>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <memory/free_run_counter_delay_0> in Unit <stump_fpga_top> is equivalent to the following FF/Latch, which will be removed : <memory/keyrow_scan_delay_0> 
+INFO:Xst:2261 - The FF/Latch <memory/free_run_counter_delay_1> in Unit <stump_fpga_top> is equivalent to the following FF/Latch, which will be removed : <memory/keyrow_scan_delay_1> 
+INFO:Xst:2261 - The FF/Latch <memory/free_run_counter_delay_2> in Unit <stump_fpga_top> is equivalent to the following FF/Latch, which will be removed : <memory/keyrow_scan_delay_2> 
+INFO:Xst:2261 - The FF/Latch <ackie_interface/return_message_64> in Unit <stump_fpga_top> is equivalent to the following 5 FFs/Latches, which will be removed : <ackie_interface/return_message_96> <ackie_interface/return_message_97> <ackie_interface/return_message_112> <ackie_interface/return_message_114> <ackie_interface/return_message_115> 
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 0) on block stump_fpga_top, actual ratio is 103.
+Optimizing block <stump_fpga_top> to meet ratio 100 (+ 0) of 600 slices :
+WARNING:Xst:2254 - Area constraint could not be met for block <stump_fpga_top>, final ratio is 108.
+FlipFlop cpu/control/fsm/state_FSM_FFd1 has been replicated 3 time(s)
+FlipFlop cpu/control/fsm/state_FSM_FFd2 has been replicated 4 time(s)
+FlipFlop cpu/datapath/ir_13 has been replicated 2 time(s)
+FlipFlop cpu/datapath/ir_14 has been replicated 2 time(s)
+FlipFlop cpu/datapath/ir_15 has been replicated 3 time(s)
+FlipFlop cpu/datapath/ir_2 has been replicated 1 time(s)
+FlipFlop cpu/datapath/ir_3 has been replicated 1 time(s)
+FlipFlop cpu/datapath/ir_4 has been replicated 2 time(s)
+FlipFlop cpu/datapath/ir_5 has been replicated 1 time(s)
+FlipFlop cpu/datapath/ir_8 has been replicated 1 time(s)
+FlipFlop cpu/datapath/ir_9 has been replicated 1 time(s)
+FlipFlop memory/count_8 has been replicated 1 time(s)
+FlipFlop memory/rgb_count_0 has been replicated 1 time(s)
+FlipFlop memory/rgb_count_1 has been replicated 1 time(s)
+FlipFlop memory/rgb_count_2 has been replicated 1 time(s)
+FlipFlop memory/rgb_count_4 has been replicated 1 time(s)
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 1086
+ Flip-Flops                                            : 1086
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : stump_fpga_top.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 2851
+#      GND                         : 1
+#      INV                         : 69
+#      LUT1                        : 57
+#      LUT2                        : 83
+#      LUT3                        : 194
+#      LUT4                        : 170
+#      LUT5                        : 479
+#      LUT6                        : 1201
+#      MUXCY                       : 246
+#      MUXF7                       : 121
+#      MUXF8                       : 1
+#      VCC                         : 1
+#      XORCY                       : 228
+# FlipFlops/Latches                : 1087
+#      FD                          : 91
+#      FDC                         : 9
+#      FDE                         : 813
+#      FDR                         : 29
+#      FDRE                        : 144
+#      LD                          : 1
+# RAMS                             : 11
+#      RAMB16BWER                  : 8
+#      RAMB8BWER                   : 3
+# Clock Buffers                    : 2
+#      BUFG                        : 2
+# IO Buffers                       : 63
+#      IBUF                        : 11
+#      IOBUF                       : 10
+#      OBUF                        : 38
+#      OBUFT                       : 4
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx4cpg196-2 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:            1087  out of   4800    22%  
+ Number of Slice LUTs:                 2253  out of   2400    93%  
+    Number used as Logic:              2253  out of   2400    93%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:   2510
+   Number with an unused Flip Flop:    1423  out of   2510    56%  
+   Number with an unused LUT:           257  out of   2510    10%  
+   Number of fully used LUT-FF pairs:   830  out of   2510    33%  
+   Number of unique control sets:        85
+
+IO Utilization: 
+ Number of IOs:                          64
+ Number of bonded IOBs:                  63  out of    106    59%  
+
+Specific Feature Utilization:
+ Number of Block RAM/FIFO:               10  out of     12    83%  
+    Number using Block RAM only:         10
+ Number of BUFG/BUFGCTRLs:                2  out of     16    12%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+--------------------------------------------------------+-----------------------------------+-------+
+Clock Signal                                            | Clock buffer(FF name)             | Load  |
+--------------------------------------------------------+-----------------------------------+-------+
+clk_pad                                                 | IBUF+BUFG                         | 926   |
+ackie_interface/proc_clk                                | BUFG                              | 171   |
+cpu/opB_mux_sel(cpu/control/decode/Mmux_opB_mux_sel11:O)| NONE(*)(cpu/control/decode/ext_op)| 1     |
+--------------------------------------------------------+-----------------------------------+-------+
+(*) This 1 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -2
+
+   Minimum period: 14.208ns (Maximum Frequency: 70.383MHz)
+   Minimum input arrival time before clock: 7.011ns
+   Maximum output required time after clock: 8.224ns
+   Maximum combinational path delay: 6.931ns
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk_pad'
+  Clock period: 14.208ns (frequency: 70.383MHz)
+  Total number of paths / destination ports: 131628 / 2068
+-------------------------------------------------------------------------
+Delay:               7.104ns (Levels of Logic = 4)
+  Source:            memory/lcd_state_0 (FF)
+  Destination:       memory/Mram_io (RAM)
+  Source Clock:      clk_pad rising
+  Destination Clock: clk_pad falling
+
+  Data Path: memory/lcd_state_0 to memory/Mram_io
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q             11   0.525   1.469  memory/lcd_state_0 (memory/lcd_state_0)
+     LUT6:I1->O            9   0.254   0.976  memory/GND_17_o_GND_17_o_AND_55_o1 (memory/GND_17_o_GND_17_o_AND_55_o1)
+     LUT6:I5->O           14   0.254   1.127  memory/Mmux_address_io_ackie1211 (memory/Mmux_address_io_ackie121)
+     LUT6:I5->O            1   0.254   0.682  memory/Mmux_address_io_ackie1_SW1 (N280)
+     LUT5:I4->O            7   0.254   0.909  memory/Mmux_address_io_ackie1 (memory/address_io_ackie<0>)
+     RAMB8BWER:ADDRAWRADDR4        0.400          memory/Mram_io
+    ----------------------------------------
+    Total                      7.104ns (1.941ns logic, 5.163ns route)
+                                       (27.3% logic, 72.7% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'ackie_interface/proc_clk'
+  Clock period: 13.863ns (frequency: 72.133MHz)
+  Total number of paths / destination ports: 1077358 / 333
+-------------------------------------------------------------------------
+Delay:               13.863ns (Levels of Logic = 10)
+  Source:            cpu/datapath/ir_13_1 (FF)
+  Destination:       cpu/datapath/registers/r_7_110 (FF)
+  Source Clock:      ackie_interface/proc_clk rising
+  Destination Clock: ackie_interface/proc_clk rising
+
+  Data Path: cpu/datapath/ir_13_1 to cpu/datapath/registers/r_7_110
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              3   0.525   0.994  cpu/datapath/ir_13_1 (cpu/datapath/ir_13_1)
+     LUT3:I0->O            2   0.235   0.726  cpu/control/decode/Mmux_srcA111_1 (cpu/control/decode/Mmux_srcA111)
+     LUT5:I4->O            8   0.254   0.943  cpu/control/decode/Mmux_srcA31_1 (cpu/control/decode/Mmux_srcA31)
+     MUXF7:S->O           13   0.185   1.326  cpu/datapath/registers/Mmux_read_addr_A[2]_r[7][15]_wide_mux_2_OUT_2_f7_9 (cpu/datapath/registers/read_addr_A[2]_r[7][15]_wide_mux_2_OUT<4>)
+     LUT6:I3->O           31   0.235   1.958  cpu/datapath/Mmux_address111 (address_cpu<4>)
+     LUT6:I0->O           19   0.254   1.261  memory/address_cpu[7]_PWR_23_o_equal_167_o<7>11 (memory/address_cpu[7]_PWR_23_o_equal_167_o<7>1)
+     LUT6:I5->O            5   0.254   0.841  memory/address_cpu[7]_PWR_23_o_equal_76_o<7>1 (memory/address_cpu[7]_PWR_23_o_equal_76_o)
+     LUT6:I5->O            1   0.254   0.682  memory/read_data_cpu<14>_SW0 (N34)
+     LUT6:I5->O           17   0.254   1.209  memory/read_data_cpu<14> (read_data_cpu<14>)
+     LUT6:I5->O            1   0.254   0.910  cpu/datapath/alu/Mmux_result61_SW1 (N481)
+     LUT6:I3->O            1   0.235   0.000  cpu/datapath/registers/Mmux_r[0][15]_r[0][15]_mux_22_OUT341 (cpu/datapath/registers/r[0][15]_r[0][15]_mux_22_OUT<14>)
+     FDE:D                     0.074          cpu/datapath/registers/r_7_14
+    ----------------------------------------
+    Total                     13.863ns (3.013ns logic, 10.850ns route)
+                                       (21.7% logic, 78.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk_pad'
+  Total number of paths / destination ports: 126 / 69
+-------------------------------------------------------------------------
+Offset:              7.011ns (Levels of Logic = 6)
+  Source:            S6_btn1_pad (PAD)
+  Destination:       ackie_interface/byte_out_1 (FF)
+  Destination Clock: clk_pad rising
+
+  Data Path: S6_btn1_pad to ackie_interface/byte_out_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             2   1.328   1.156  btn_buf_1 (S6_btn1)
+     LUT6:I1->O            1   0.254   1.137  ackie_interface/Mmux__n0909410 (ackie_interface/Mmux__n0909410)
+     LUT6:I0->O            1   0.254   0.682  ackie_interface/Mmux__n0909417 (ackie_interface/Mmux__n0909417)
+     LUT6:I5->O            1   0.254   0.682  ackie_interface/Mmux__n0909418 (ackie_interface/Mmux__n0909418)
+     LUT6:I5->O            1   0.254   0.682  ackie_interface/Mmux__n0909419 (ackie_interface/Mmux__n0909419)
+     LUT5:I4->O            1   0.254   0.000  ackie_interface/Mmux__n0909420 (ackie_interface/_n0909<1>)
+     FDE:D                     0.074          ackie_interface/byte_out_1
+    ----------------------------------------
+    Total                      7.011ns (2.672ns logic, 4.339ns route)
+                                       (38.1% logic, 61.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'ackie_interface/proc_clk'
+  Total number of paths / destination ports: 16 / 16
+-------------------------------------------------------------------------
+Offset:              5.913ns (Levels of Logic = 5)
+  Source:            S6_btn1_pad (PAD)
+  Destination:       cpu/datapath/registers/r_7_97 (FF)
+  Destination Clock: ackie_interface/proc_clk rising
+
+  Data Path: S6_btn1_pad to cpu/datapath/registers/r_7_97
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             2   1.328   1.002  btn_buf_1 (S6_btn1)
+     LUT6:I2->O            1   0.254   0.910  memory/read_data_cpu<1>2 (memory/read_data_cpu<1>1)
+     LUT6:I3->O            2   0.235   0.726  memory/read_data_cpu<1>9_SW0 (N196)
+     LUT6:I5->O            6   0.254   0.876  cpu/datapath/Mmux_reg_data81 (cpu/datapath/reg_data<1>)
+     LUT5:I4->O            1   0.254   0.000  cpu/datapath/registers/Mmux_r[0][15]_r[0][15]_mux_22_OUT371 (cpu/datapath/registers/r[0][15]_r[0][15]_mux_22_OUT<17>)
+     FDE:D                     0.074          cpu/datapath/registers/r_7_17
+    ----------------------------------------
+    Total                      5.913ns (2.399ns logic, 3.514ns route)
+                                       (40.6% logic, 59.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk_pad'
+  Total number of paths / destination ports: 299 / 51
+-------------------------------------------------------------------------
+Offset:              8.224ns (Levels of Logic = 4)
+  Source:            memory/rgb_count_1 (FF)
+  Destination:       rgb_col_pads<7> (PAD)
+  Source Clock:      clk_pad rising
+
+  Data Path: memory/rgb_count_1 to rgb_col_pads<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q            43   0.525   1.980  memory/rgb_count_1 (memory/rgb_count_1)
+     LUT4:I0->O            1   0.254   0.682  memory/Mmux_rgb_col124 (memory/Mmux_rgb_col123)
+     LUT6:I5->O            1   0.254   0.682  memory/Mmux_rgb_col125 (memory/Mmux_rgb_col124)
+     LUT5:I4->O            1   0.254   0.681  memory/Mmux_rgb_col126 (rgb_col<2>)
+     OBUF:I->O                 2.912          matrix_buf_3<2> (rgb_col_pads<2>)
+    ----------------------------------------
+    Total                      8.224ns (4.199ns logic, 4.025ns route)
+                                       (51.1% logic, 48.9% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 8 / 8
+-------------------------------------------------------------------------
+Delay:               6.931ns (Levels of Logic = 3)
+  Source:            epp_input_pads<2> (PAD)
+  Destination:       epp_data_pads<7> (PAD)
+
+  Data Path: epp_input_pads<2> to epp_data_pads<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            11   1.328   1.038  epp_buf_4 (epp_rnw)
+     INV:I->O              8   0.710   0.943  epp_inv (epp_wr)
+     IOBUF:T->IO               2.912          epp_buf_1<0> (epp_data_pads<0>)
+    ----------------------------------------
+    Total                      6.931ns (4.950ns logic, 1.981ns route)
+                                       (71.4% logic, 28.6% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock ackie_interface/proc_clk
+------------------------+---------+---------+---------+---------+
+                        | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock            |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+------------------------+---------+---------+---------+---------+
+ackie_interface/proc_clk|   13.863|         |         |         |
+clk_pad                 |    7.805|    7.191|         |         |
+cpu/opB_mux_sel         |         |   10.350|         |         |
+------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock clk_pad
+------------------------+---------+---------+---------+---------+
+                        | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock            |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+------------------------+---------+---------+---------+---------+
+ackie_interface/proc_clk|   13.372|         |   11.573|         |
+clk_pad                 |   11.087|    5.683|    7.104|         |
+------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock cpu/opB_mux_sel
+------------------------+---------+---------+---------+---------+
+                        | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock            |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+------------------------+---------+---------+---------+---------+
+ackie_interface/proc_clk|         |         |    1.790|         |
+------------------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 11.00 secs
+Total CPU time to Xst completion: 11.56 secs
+ 
+--> 
+
+
+Total memory usage is 397436 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :  153 (   0 filtered)
+Number of infos    :   15 (   0 filtered)
+
+Release 14.7 - ngdbuild P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+Command Line:
+/cadtools5/Xilinx_14.7/14.7/ISE_DS/ISE/bin/lin64/unwrapped/ngdbuild -sd /tmp -dd
+_ngo -aul -nt timestamp -p xc6slx4-cpg196-2 -uc
+/netopt/info/courses/COMP22111/JULY2022/Cadence/reffiles/constraints.ucf
+stump_fpga_top
+
+Reading NGO file
+"/home/f93937xl/Cadence/COMP22111/xilinx_compile/stump_fpga_top.ngc" ...
+Gathering constraint information from source properties...
+Done.
+
+Annotating constraints to design from ucf file
+"/netopt/info/courses/COMP22111/JULY2022/Cadence/reffiles/constraints.ucf" ...
+Resolving constraint associations...
+Checking Constraint Associations...
+Done...
+
+Checking expanded design ...
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+NGDBUILD Design Results Summary:
+  Number of errors:     0
+  Number of warnings:   0
+
+Writing NGD file "stump_fpga_top.ngd" ...
+Total REAL time to NGDBUILD completion:  2 sec
+Total CPU time to NGDBUILD completion:   2 sec
+
+Writing NGDBUILD log file "stump_fpga_top.bld"...
+
+NGDBUILD done.
+Release 14.7 - Map P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Using target part "6slx4cpg196-2".
+vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+INFO:Security:50 - The XILINXD_LICENSE_FILE environment variable is set to
+'2100@cadmaster.cs.man.ac.uk'.
+INFO:Security:53 - The LM_LICENSE_FILE environment variable is not set.
+INFO:Security:54 - 'xc6slx4' is a WebPack part.
+WARNING:Security:43 - No license file was found in the standard Xilinx license
+directory.
+WARNING:Security:44 - Since no license file was found,
+       please run the Xilinx License Configuration Manager
+       (xlcm or "Manage Xilinx Licenses")
+       to assist in obtaining a license.
+WARNING:Security:42 - Your software subscription period has lapsed. Your current
+version of Xilinx tools will continue to function, but you no longer qualify for
+Xilinx software updates or new releases.
+----------------------------------------------------------------------
+Mapping design into LUTs...
+Writing file stump_fpga_top.ngm...
+Running directed packing...
+Running delay-based LUT packing...
+Updating timing models...
+INFO:Map:215 - The Interim Design Summary has been generated in the MAP Report
+   (.mrp).
+Running timing-driven placement...
+Total REAL time at the beginning of Placer: 5 secs 
+Total CPU  time at the beginning of Placer: 4 secs 
+
+Phase 1.1  Initial Placement Analysis
+Phase 1.1  Initial Placement Analysis (Checksum:50cce28f) REAL time: 5 secs 
+
+Phase 2.7  Design Feasibility Check
+Phase 2.7  Design Feasibility Check (Checksum:50cce28f) REAL time: 5 secs 
+
+Phase 3.31  Local Placement Optimization
+Phase 3.31  Local Placement Optimization (Checksum:50cce28f) REAL time: 5 secs 
+
+Phase 4.2  Initial Placement for Architecture Specific Features
+
+Phase 4.2  Initial Placement for Architecture Specific Features
+(Checksum:4c42942f) REAL time: 7 secs 
+
+Phase 5.36  Local Placement Optimization
+Phase 5.36  Local Placement Optimization (Checksum:4c42942f) REAL time: 7 secs 
+
+Phase 6.30  Global Clock Region Assignment
+Phase 6.30  Global Clock Region Assignment (Checksum:4c42942f) REAL time: 7 secs 
+
+Phase 7.3  Local Placement Optimization
+Phase 7.3  Local Placement Optimization (Checksum:4c42942f) REAL time: 7 secs 
+
+Phase 8.5  Local Placement Optimization
+Phase 8.5  Local Placement Optimization (Checksum:4c42942f) REAL time: 7 secs 
+
+Phase 9.8  Global Placement
+......................
+..............................................................
+......................................................................................................................................................................
+................................................................................................................................................................................
+......................................
+Phase 9.8  Global Placement (Checksum:b9873137) REAL time: 20 secs 
+
+Phase 10.5  Local Placement Optimization
+Phase 10.5  Local Placement Optimization (Checksum:b9873137) REAL time: 20 secs 
+
+Phase 11.18  Placement Optimization
+Phase 11.18  Placement Optimization (Checksum:4c75b33e) REAL time: 28 secs 
+
+Phase 12.5  Local Placement Optimization
+Phase 12.5  Local Placement Optimization (Checksum:4c75b33e) REAL time: 28 secs 
+
+Phase 13.34  Placement Validation
+Phase 13.34  Placement Validation (Checksum:456d5cc5) REAL time: 28 secs 
+
+Total REAL time to Placer completion: 28 secs 
+Total CPU  time to Placer completion: 27 secs 
+Running post-placement packing...
+Writing output files...
+
+Design Summary:
+Number of errors:      0
+Number of warnings:    2
+Slice Logic Utilization:
+  Number of Slice Registers:                 1,064 out of   4,800   22%
+    Number used as Flip Flops:               1,062
+    Number used as Latches:                      1
+    Number used as Latch-thrus:                  0
+    Number used as AND/OR logics:                1
+  Number of Slice LUTs:                      2,065 out of   2,400   86%
+    Number used as logic:                    2,058 out of   2,400   85%
+      Number using O6 output only:           1,683
+      Number using O5 output only:              54
+      Number using O5 and O6:                  321
+      Number used as ROM:                        0
+    Number used as Memory:                       0 out of   1,200    0%
+    Number used exclusively as route-thrus:      7
+      Number with same-slice register load:      1
+      Number with same-slice carry load:         5
+      Number with other load:                    1
+
+Slice Logic Distribution:
+  Number of occupied Slices:                   576 out of     600   96%
+  Number of MUXCYs used:                       280 out of   1,200   23%
+  Number of LUT Flip Flop pairs used:        2,123
+    Number with an unused Flip Flop:         1,099 out of   2,123   51%
+    Number with an unused LUT:                  58 out of   2,123    2%
+    Number of fully used LUT-FF pairs:         966 out of   2,123   45%
+    Number of unique control sets:              82
+    Number of slice register sites lost
+      to control set restrictions:             137 out of   4,800    2%
+
+  A LUT Flip Flop pair for this architecture represents one LUT paired with
+  one Flip Flop within a slice.  A control set is a unique combination of
+  clock, reset, set, and enable signals for a registered element.
+  The Slice Logic Distribution report is not meaningful if the design is
+  over-mapped for a non-slice resource or if Placement fails.
+
+IO Utilization:
+  Number of bonded IOBs:                        63 out of     106   59%
+    Number of LOCed IOBs:                       63 out of      63  100%
+    IOB Flip Flops:                             24
+
+Specific Feature Utilization:
+  Number of RAMB16BWERs:                         8 out of      12   66%
+  Number of RAMB8BWERs:                          3 out of      24   12%
+  Number of BUFIO2/BUFIO2_2CLKs:                 0 out of      32    0%
+  Number of BUFIO2FB/BUFIO2FB_2CLKs:             0 out of      32    0%
+  Number of BUFG/BUFGMUXs:                       2 out of      16   12%
+    Number used as BUFGs:                        2
+    Number used as BUFGMUX:                      0
+  Number of DCM/DCM_CLKGENs:                     0 out of       4    0%
+  Number of ILOGIC2/ISERDES2s:                   8 out of     200    4%
+    Number used as ILOGIC2s:                     8
+    Number used as ISERDES2s:                    0
+  Number of IODELAY2/IODRP2/IODRP2_MCBs:         0 out of     200    0%
+  Number of OLOGIC2/OSERDES2s:                  16 out of     200    8%
+    Number used as OLOGIC2s:                    16
+    Number used as OSERDES2s:                    0
+  Number of BSCANs:                              0 out of       4    0%
+  Number of BUFHs:                               0 out of     128    0%
+  Number of BUFPLLs:                             0 out of       8    0%
+  Number of BUFPLL_MCBs:                         0 out of       4    0%
+  Number of DSP48A1s:                            0 out of       8    0%
+  Number of ICAPs:                               0 out of       1    0%
+  Number of PCILOGICSEs:                         0 out of       2    0%
+  Number of PLL_ADVs:                            0 out of       2    0%
+  Number of PMVs:                                0 out of       1    0%
+  Number of STARTUPs:                            0 out of       1    0%
+  Number of SUSPEND_SYNCs:                       0 out of       1    0%
+
+Average Fanout of Non-Clock Nets:                4.86
+
+Peak Memory Usage:  689 MB
+Total REAL time to MAP completion:  30 secs 
+Total CPU time to MAP completion:   29 secs 
+
+Mapping completed.
+See MAP report file "stump_fpga_top.mrp" for details.
+Release 14.7 - par P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+
+
+Constraints file: stump_fpga_top.pcf.
+Loading device for application Rf_Device from file '6slx4.nph' in environment /cadtools5/Xilinx_14.7/14.7/ISE_DS/ISE/.
+   "stump_fpga_top" is an NCD, version 3.2, device xc6slx4, package cpg196, speed -2
+vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+INFO:Security:50 - The XILINXD_LICENSE_FILE environment variable is set to '2100@cadmaster.cs.man.ac.uk'.
+INFO:Security:53 - The LM_LICENSE_FILE environment variable is not set.
+INFO:Security:54 - 'xc6slx4' is a WebPack part.
+WARNING:Security:43 - No license file was found in the standard Xilinx license directory.
+WARNING:Security:44 - Since no license file was found,
+       please run the Xilinx License Configuration Manager
+       (xlcm or "Manage Xilinx Licenses")
+       to assist in obtaining a license.
+WARNING:Security:42 - Your software subscription period has lapsed. Your current version of Xilinx tools will continue
+to function, but you no longer qualify for Xilinx software updates or new releases.
+
+----------------------------------------------------------------------
+
+Initializing temperature to 85.000 Celsius. (default - Range: 0.000 to 85.000 Celsius)
+Initializing voltage to 1.140 Volts. (default - Range: 1.140 to 1.260 Volts)
+
+INFO:Par:282 - No user timing constraints were detected or you have set the option to ignore timing constraints ("par
+   -x"). Place and Route will run in "Performance Evaluation Mode" to automatically improve the performance of all
+   internal clocks in this design. Because there are not defined timing requirements, a timing score will not be
+   reported in the PAR report in this mode. The PAR timing summary will list the performance achieved for each clock.
+   Note: For the fastest runtime, set the effort level to "std".  For best performance, set the effort level to "high".
+
+Device speed data version:  "PRODUCTION 1.23 2013-10-13".
+
+
+
+Device Utilization Summary:
+
+Slice Logic Utilization:
+  Number of Slice Registers:                 1,064 out of   4,800   22%
+    Number used as Flip Flops:               1,062
+    Number used as Latches:                      1
+    Number used as Latch-thrus:                  0
+    Number used as AND/OR logics:                1
+  Number of Slice LUTs:                      2,065 out of   2,400   86%
+    Number used as logic:                    2,058 out of   2,400   85%
+      Number using O6 output only:           1,683
+      Number using O5 output only:              54
+      Number using O5 and O6:                  321
+      Number used as ROM:                        0
+    Number used as Memory:                       0 out of   1,200    0%
+    Number used exclusively as route-thrus:      7
+      Number with same-slice register load:      1
+      Number with same-slice carry load:         5
+      Number with other load:                    1
+
+Slice Logic Distribution:
+  Number of occupied Slices:                   576 out of     600   96%
+  Number of MUXCYs used:                       280 out of   1,200   23%
+  Number of LUT Flip Flop pairs used:        2,123
+    Number with an unused Flip Flop:         1,099 out of   2,123   51%
+    Number with an unused LUT:                  58 out of   2,123    2%
+    Number of fully used LUT-FF pairs:         966 out of   2,123   45%
+    Number of slice register sites lost
+      to control set restrictions:               0 out of   4,800    0%
+
+  A LUT Flip Flop pair for this architecture represents one LUT paired with
+  one Flip Flop within a slice.  A control set is a unique combination of
+  clock, reset, set, and enable signals for a registered element.
+  The Slice Logic Distribution report is not meaningful if the design is
+  over-mapped for a non-slice resource or if Placement fails.
+
+IO Utilization:
+  Number of bonded IOBs:                        63 out of     106   59%
+    Number of LOCed IOBs:                       63 out of      63  100%
+    IOB Flip Flops:                             24
+
+Specific Feature Utilization:
+  Number of RAMB16BWERs:                         8 out of      12   66%
+  Number of RAMB8BWERs:                          3 out of      24   12%
+  Number of BUFIO2/BUFIO2_2CLKs:                 0 out of      32    0%
+  Number of BUFIO2FB/BUFIO2FB_2CLKs:             0 out of      32    0%
+  Number of BUFG/BUFGMUXs:                       2 out of      16   12%
+    Number used as BUFGs:                        2
+    Number used as BUFGMUX:                      0
+  Number of DCM/DCM_CLKGENs:                     0 out of       4    0%
+  Number of ILOGIC2/ISERDES2s:                   8 out of     200    4%
+    Number used as ILOGIC2s:                     8
+    Number used as ISERDES2s:                    0
+  Number of IODELAY2/IODRP2/IODRP2_MCBs:         0 out of     200    0%
+  Number of OLOGIC2/OSERDES2s:                  16 out of     200    8%
+    Number used as OLOGIC2s:                    16
+    Number used as OSERDES2s:                    0
+  Number of BSCANs:                              0 out of       4    0%
+  Number of BUFHs:                               0 out of     128    0%
+  Number of BUFPLLs:                             0 out of       8    0%
+  Number of BUFPLL_MCBs:                         0 out of       4    0%
+  Number of DSP48A1s:                            0 out of       8    0%
+  Number of ICAPs:                               0 out of       1    0%
+  Number of PCILOGICSEs:                         0 out of       2    0%
+  Number of PLL_ADVs:                            0 out of       2    0%
+  Number of PMVs:                                0 out of       1    0%
+  Number of STARTUPs:                            0 out of       1    0%
+  Number of SUSPEND_SYNCs:                       0 out of       1    0%
+
+
+Overall effort level (-ol):   Standard 
+Router effort level (-rl):    Standard 
+
+Starting initial Timing Analysis.  REAL time: 2 secs 
+Finished initial Timing Analysis.  REAL time: 2 secs 
+
+WARNING:Par:288 - The signal scl_buf_0/O has no load.  PAR will not attempt to route this signal.
+Starting Router
+
+
+Phase  1  : 12706 unrouted;      REAL time: 2 secs 
+
+Phase  2  : 11800 unrouted;      REAL time: 3 secs 
+
+Phase  3  : 7270 unrouted;      REAL time: 5 secs 
+
+Phase  4  : 7304 unrouted; (Par is working to improve performance)     REAL time: 5 secs 
+
+Updating file: stump_fpga_top.ncd with current fully routed design.
+
+Phase  5  : 0 unrouted; (Par is working to improve performance)     REAL time: 11 secs 
+
+Phase  6  : 0 unrouted; (Par is working to improve performance)     REAL time: 11 secs 
+
+Phase  7  : 0 unrouted; (Par is working to improve performance)     REAL time: 11 secs 
+
+Phase  8  : 0 unrouted; (Par is working to improve performance)     REAL time: 11 secs 
+
+Phase  9  : 0 unrouted; (Par is working to improve performance)     REAL time: 11 secs 
+
+Phase 10  : 0 unrouted; (Par is working to improve performance)     REAL time: 11 secs 
+Total REAL time to Router completion: 11 secs 
+Total CPU time to Router completion: 12 secs 
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+Generating "PAR" statistics.
+INFO:Par:459 - The Clock Report is not displayed in the non timing-driven mode.
+Timing Score: 0 (Setup: 0, Hold: 0)
+
+Asterisk (*) preceding a constraint indicates it was not met.
+   This may be due to a setup or hold violation.
+
+----------------------------------------------------------------------------------------------------------
+  Constraint                                |    Check    | Worst Case |  Best Case | Timing |   Timing   
+                                            |             |    Slack   | Achievable | Errors |    Score   
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net clk | SETUP       |         N/A|    13.179ns|     N/A|           0
+  _BUFG                                     | HOLD        |     0.411ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net ack | SETUP       |         N/A|    14.002ns|     N/A|           0
+  ie_interface/proc_clk_BUFG                | HOLD        |     0.436ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+
+
+All constraints were met.
+INFO:Timing:2761 - N/A entries in the Constraints List may indicate that the 
+   constraint is not analyzed due to the following: No paths covered by this 
+   constraint; Other constraints intersect with this constraint; or This 
+   constraint was disabled by a Path Tracing Control. Please run the Timespec 
+   Interaction Report (TSI) via command line (trce tsi) or Timing Analyzer GUI.
+
+
+Generating Pad Report.
+
+All signals are completely routed.
+
+WARNING:Par:283 - There are 1 loadless signals in this design. This design will cause Bitgen to issue DRC warnings.
+
+Total REAL time to PAR completion: 12 secs 
+Total CPU time to PAR completion: 12 secs 
+
+Peak Memory Usage:  639 MB
+
+Placer: Placement generated during map.
+Routing: Completed - No errors found.
+
+Number of error messages: 0
+Number of warning messages: 3
+Number of info messages: 2
+
+Writing design to file stump_fpga_top.ncd
+
+
+
+PAR done!
+Release 14.7 - Bitgen P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Loading device for application Rf_Device from file '6slx4.nph' in environment
+/cadtools5/Xilinx_14.7/14.7/ISE_DS/ISE/.
+   "stump_fpga_top" is an NCD, version 3.2, device xc6slx4, package cpg196,
+speed -2
+Opened constraints file stump_fpga_top.pcf.
+
+Wed Nov 30 15:43:34 2022
+
+INFO:Bitgen:341 - This design is using one or more 9K Block RAMs (RAMB8BWER). 
+   9K Block RAM initialization data, both user defined and default, requires a
+   special bit stream format.  For more information, please reference Xilinx
+   Answer Record 39999.
+Running DRC.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net cpu/opB_mux_sel is sourced
+   by a combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:2410 - This design is using one or more 9K Block RAMs
+   (RAMB8BWER).  9K Block RAM initialization data, both user defined and
+   default, may be incorrect and should not be used.  For more information,
+   please reference Xilinx Answer Record 39999.
+DRC detected 0 errors and 2 warnings.  Please see the previously displayed
+individual error or warning messages for more details.
+INFO:Security:50 - The XILINXD_LICENSE_FILE environment variable is set to
+'2100@cadmaster.cs.man.ac.uk'.
+INFO:Security:53 - The LM_LICENSE_FILE environment variable is not set.
+INFO:Security:54 - 'xc6slx4' is a WebPack part.
+WARNING:Security:43 - No license file was found in the standard Xilinx license
+directory.
+WARNING:Security:44 - Since no license file was found,
+       please run the Xilinx License Configuration Manager
+       (xlcm or "Manage Xilinx Licenses")
+       to assist in obtaining a license.
+WARNING:Security:42 - Your software subscription period has lapsed. Your current
+version of Xilinx tools will continue to function, but you no longer qualify for
+Xilinx software updates or new releases.
+
+Creating bit map...
+Saving bit stream in "stump_fpga_top.bit".
+Bitstream generation is complete.
+Done

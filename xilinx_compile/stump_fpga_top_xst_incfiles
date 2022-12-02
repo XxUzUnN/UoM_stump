@@ -1,0 +1,13 @@
+verilog work 	    /home/f93937xl/Cadence/COMP22111/Stump/Stump/functional/verilog.v
+verilog work 	    /home/f93937xl/Cadence/COMP22111/Stump/Stump_ALU/functional/verilog.v
+verilog work 	    /home/f93937xl/Cadence/COMP22111/Stump/Stump_control/functional/verilog.v
+verilog work 	    /home/f93937xl/Cadence/COMP22111/Stump/Stump_datapath/functional/verilog.v
+verilog work 	    /./home/f93937xl/Cadence/COMP22111/Stump/Stump_FSM/functional/verilog.v
+verilog work 	    /./home/f93937xl/Cadence/COMP22111/Stump/Stump_control_decode/functional/verilog.v
+verilog work 	    /./home/f93937xl/Cadence/COMP22111/Stump/Stump_definitions.v
+verilog work 	    /./home/f93937xl/Cadence/COMP22111/Stump/Stump_registers/functional/verilog.v
+verilog work 	    /./home/f93937xl/Cadence/COMP22111/Stump/Stump_shifter/functional/verilog.v
+verilog work 	    /./home/f93937xl/Cadence/COMP22111/fpga/ackie/functional/verilog.v
+verilog work 	    /./home/f93937xl/Cadence/COMP22111/fpga/emulated_uart/functional/verilog.v
+verilog work 	    /./home/f93937xl/Cadence/COMP22111/fpga/memory_stump/functional/verilog.v
+verilog work 	    /./home/f93937xl/Cadence/COMP22111/fpga/stump_fpga_top/functional/verilog.v
